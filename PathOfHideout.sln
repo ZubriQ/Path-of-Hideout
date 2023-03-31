@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathOfHideout", "PathOfHideout\PathOfHideout.csproj", "{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {906D6E76-BDF4-4914-B4FD-5FE3B50B4261}
+	EndGlobalSection
+EndGlobal
