@@ -15,30 +15,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PathOfHideout
+namespace PathOfHideout.Windows;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    private readonly HideoutMover _hideoutMover = new();
+
+    public MainWindow()
     {
-        private HideoutMover _hideoutMover = new();
+        InitializeComponent();
 
-        public MainWindow()
-        {
-            InitializeComponent();
+        // Simply stub test data
+        TxtHideoutFilePath.Text = @"F:\hideout.hideout";
+        TxtXCoordinate.Text = "10";
+        TxtYCoordinate.Text = "10";
+    }
 
-            txt_HideoutFilePath.Text = @"F:\hideout.hideout";
-            txt_XCoordinate.Text = "10";
-            txt_YCoordinate.Text = "10";
-        }
-
-        private void btn_MoveDecorations_Click(object sender, RoutedEventArgs e)
-        {
-            _hideoutMover.MoveDecorations(
-                txt_HideoutFilePath.Text, 
-                int.Parse(txt_XCoordinate.Text), 
-                int.Parse(txt_YCoordinate.Text));
-        }
+    private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
+    {
+        _hideoutMover.MoveDecorations(
+            TxtHideoutFilePath.Text, 
+            int.Parse(TxtXCoordinate.Text), 
+            int.Parse(TxtYCoordinate.Text));
     }
 }

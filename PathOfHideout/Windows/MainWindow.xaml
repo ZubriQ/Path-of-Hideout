@@ -1,4 +1,4 @@
-﻿<Window x:Class="PathOfHideout.MainWindow"
+﻿<Window x:Class="PathOfHideout.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,27 +8,27 @@
         Title="Path of Hideout" Height="150" Width="300">
     <StackPanel VerticalAlignment="Center">
 
-        <TextBox x:Name="txt_HideoutFilePath"
+        <TextBox x:Name="TxtHideoutFilePath"
                  Height="26"
                  Width="150" />
 
         <!-- Coordinates -->
         <DockPanel HorizontalAlignment="Center">
-            <TextBox x:Name="txt_XCoordinate"
+            <TextBox x:Name="TxtXCoordinate"
                      Height="26"
                      Width="40"
                      Margin="5" />
 
-            <TextBox x:Name="txt_YCoordinate"
+            <TextBox x:Name="TxtYCoordinate"
                      Height="26"
                      Width="40"
                      Margin="5" />
         </DockPanel>
 
-        <Button x:Name="btn_MoveDecorations"
+        <Button x:Name="BtnMoveDecorations"
                 Height="26"
                 Width="150"
                 Content="Move"
-                Click="btn_MoveDecorations_Click" />
+                Click="BtnMoveDecorations_Click" />
     </StackPanel>
 </Window>
