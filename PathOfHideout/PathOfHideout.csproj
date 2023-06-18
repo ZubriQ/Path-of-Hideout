@@ -11,4 +11,12 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\AppIcon\" />
+    <Folder Include="Resources\Templates\" />
+    <Folder Include="Resources\Styles\" />
+  </ItemGroup>
+
 </Project>
