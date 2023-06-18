@@ -2,11 +2,11 @@ namespace PathOfHideout.Utilities;
 
 public class InitialParameters
 {
-    public string Source { get; private set; }
-    public string Destination { get; private set; }
-    public int XCoordinate { get; private set; }
-    public int YCoordinate { get; private set; }
-    
+    public string Source { get; }
+    public string Destination { get; }
+    public int XCoordinate { get; }
+    public int YCoordinate { get; }
+
     /// <summary>
     /// Sets initial parameters before any changes.
     /// </summary>
@@ -17,9 +17,9 @@ public class InitialParameters
     public InitialParameters(string source, int xChange, int yChange, string? destination = "")
     {
         Source = source;
-        Destination = string.IsNullOrWhiteSpace(destination) ? 
+        Destination = string.IsNullOrWhiteSpace(destination) ?
             Source : Destination = destination;
-        
+
         XCoordinate = xChange;
         YCoordinate = yChange;
     }

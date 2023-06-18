@@ -15,11 +15,11 @@ public class HideoutMover
     public void MoveDecorations(string source, int xChange, int yChange, string? destination = "")
     {
         _initialParameters = new InitialParameters(source, xChange, yChange, destination);
-        ReadHideoutFileAndUpdateDecorationCoordinates();
+        ReadHideoutFileAndUpdateDecorationsCoordinates();
         SaveUpdatedHideout();
     }
 
-    private void ReadHideoutFileAndUpdateDecorationCoordinates()
+    private void ReadHideoutFileAndUpdateDecorationsCoordinates()
     {
         string hideoutJson = File.ReadAllText(_initialParameters.Source);
         if (string.IsNullOrWhiteSpace(hideoutJson))
@@ -33,14 +33,12 @@ public class HideoutMover
 
     private void UpdateDecorations()
     {
-        if (_hideout is null || _hideout.Decorations.Count <= 0)
+        if (_hideout?.Decorations.Count > 0)
         {
-            return;
-        }
-        
-        foreach (var decoration in _hideout.Decorations)
-        {
-            UpdateDecorationXyValues(decoration);
+            foreach (var decoration in _hideout.Decorations)
+            {
+                UpdateDecorationXyValues(decoration);
+            }
         }
     }
 
