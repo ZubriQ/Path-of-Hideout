@@ -1,4 +1,4 @@
-namespace PathOfHideout.Utilities;
+namespace PathOfHideout.HideoutMover.Utilities;
 
 public class InitialParameters
 {
@@ -8,7 +8,7 @@ public class InitialParameters
     public int YCoordinate { get; }
 
     /// <summary>
-    /// Sets initial parameters before any changes.
+    /// Sets initial parameters before updating decorations' coordinates.
     /// </summary>
     /// <param name="source">The Hideout file to update.</param>
     /// <param name="xChange">How much to change the x coordinate.</param>

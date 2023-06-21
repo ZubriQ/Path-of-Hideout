@@ -12,11 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\Templates\Buttons\Additional\" />
+    <Folder Include="Validation\" />
     <Folder Include="Resources\Images\" />
     <Folder Include="Resources\Fonts\" />
     <Folder Include="Resources\AppIcon\" />
-    <Folder Include="Resources\Templates\" />
-    <Folder Include="Resources\Styles\" />
+    <Folder Include="Resources\UserControls\" />
   </ItemGroup>
 
 </Project>

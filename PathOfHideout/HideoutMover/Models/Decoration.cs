@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PathOfHideout.Models;
+namespace PathOfHideout.HideoutMover.Models;
 
 internal class Decoration
 {

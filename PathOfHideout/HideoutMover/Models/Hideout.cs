@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using PathOfHideout.Utilities;
+using PathOfHideout.HideoutMover.Utilities;
 using System.Collections.Generic;
 
-namespace PathOfHideout.Models;
+namespace PathOfHideout.HideoutMover.Models;
 
 internal class Hideout
 {
-    public Hideout() 
+    public Hideout()
     {
         Decorations = new(new DuplicateKeyComparer<string>());
     }
@@ -24,5 +24,5 @@ internal class Hideout
     public long HideoutHash { get; set; }
 
     [JsonProperty("doodads")]
-    public Dictionary<string, Decoration> Decorations { get; set; } 
+    public Dictionary<string, Decoration> Decorations { get; set; }
 }

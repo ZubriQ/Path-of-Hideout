@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate TargetType="Button"
+                     x:Key="DefaultButton">
+        <Border x:Name="BtnDefault"
+                Background="{StaticResource PrimaryBrush}"
+                BorderThickness="0"
+                CornerRadius="8"
+                Height="32"
+                Padding="8,0,8,0">
+            <ContentControl Margin="{TemplateBinding Padding}"
+                            Content="{TemplateBinding Content}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Foreground="{TemplateBinding Foreground}"
+                            FontFamily="Inter"
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            VerticalContentAlignment="Center" 
+                            Focusable="False" />
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="true">
+                <Setter TargetName="BtnDefault"
+                        Property="Background"
+                        Value="{StaticResource PrimaryDarkBrush1}" />
+            </Trigger>
+            <Trigger Property="IsPressed"
+                     Value="true">
+                <Setter TargetName="BtnDefault"
+                        Property="Background"
+                        Value="{StaticResource PrimaryDarkBrush2}" />
+            </Trigger>
+
+            <Trigger Property="IsEnabled"
+                     Value="false">
+                <Setter TargetName="BtnDefault"
+                        Property="Background"
+                        Value="{StaticResource Silver600Brush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

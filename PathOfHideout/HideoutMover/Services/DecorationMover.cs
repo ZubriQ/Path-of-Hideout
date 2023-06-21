@@ -1,15 +1,14 @@
 ﻿using Newtonsoft.Json;
-using PathOfHideout.Models;
-using PathOfHideout.Utilities;
+using PathOfHideout.HideoutMover.Models;
+using PathOfHideout.HideoutMover.Utilities;
 using System.Collections.Generic;
 using System.IO;
 
-namespace PathOfHideout.Services;
+namespace PathOfHideout.HideoutMover.Services;
 
-public class HideoutMover
+public class DecorationMover
 {
     private InitialParameters _initialParameters = null!;
-    
     private Hideout? _hideout;
 
     public void MoveDecorations(string source, int xChange, int yChange, string? destination = "")
@@ -26,7 +25,7 @@ public class HideoutMover
         {
             return;
         }
-        
+
         _hideout = JsonConvert.DeserializeObject<Hideout>(hideoutJson);
         UpdateDecorations();
     }
@@ -45,11 +44,11 @@ public class HideoutMover
     private void UpdateDecorationXyValues(KeyValuePair<string, Decoration> decoration)
     {
         var xValue = decoration.Value.X + _initialParameters.XCoordinate;
-        decoration.Value.X = (xValue is < Constants.XLimitMax and > Constants.XLimitMin) ?
+        decoration.Value.X = xValue is < Constants.XLimitMax and > Constants.XLimitMin ?
             xValue : decoration.Value.X;
 
         var yValue = decoration.Value.Y + _initialParameters.YCoordinate;
-        decoration.Value.Y = (yValue is < Constants.YLimitMax and > Constants.YLimitMin) ?
+        decoration.Value.Y = yValue is < Constants.YLimitMax and > Constants.YLimitMin ?
             yValue : decoration.Value.Y;
     }
 

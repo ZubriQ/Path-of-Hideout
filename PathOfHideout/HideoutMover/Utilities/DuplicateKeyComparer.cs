@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PathOfHideout.Utilities;
+namespace PathOfHideout.HideoutMover.Utilities;
 
 public class DuplicateKeyComparer<TKey> : IEqualityComparer<TKey>
 {

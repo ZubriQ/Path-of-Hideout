@@ -1,4 +1,4 @@
-﻿using PathOfHideout.Services;
+﻿using PathOfHideout.HideoutMover.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,23 +22,65 @@ namespace PathOfHideout.Windows;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private readonly HideoutMover _hideoutMover = new();
+    private readonly DecorationMover _hideoutMover = new();
 
     public MainWindow()
     {
         InitializeComponent();
+        InitializeSettings();
+    }
 
-        // Simply stub test data
-        TxtHideoutFilePath.Text = @"F:\hideout.hideout";
+    private void InitializeSettings()
+    {
+        // Right now it's a stub.
+        // TODO: Proper initial settings
+
+        TxtHideoutSourceFilePath.Text = @"F:\hideout.hideout";
+        TxtHideoutDestinationPath.Text = @"F:\hideout.hideout";
         TxtXCoordinate.Text = "10";
-        TxtYCoordinate.Text = "10";
+        TxtYCoordinate.Text = "-10";
+    }
+
+    private void BtnFindFile_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void BtnSaveAs_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 
     private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
     {
+        // TODO: Validation
+
         _hideoutMover.MoveDecorations(
-            TxtHideoutFilePath.Text, 
-            int.Parse(TxtXCoordinate.Text), 
-            int.Parse(TxtYCoordinate.Text));
+            TxtHideoutSourceFilePath.Text,
+            int.Parse(TxtXCoordinate.Text),
+            int.Parse(TxtYCoordinate.Text),
+            TxtHideoutDestinationPath.Text);
     }
+
+    #region Default UI behaviour
+
+    private void BrdTitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+        if (e.LeftButton == MouseButtonState.Pressed)
+        {
+            DragMove();
+        }
+    }
+
+    private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+    {
+        WindowState = WindowState.Minimized;
+    }
+
+    private void BtnClose_Click(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
+
+    #endregion
 }

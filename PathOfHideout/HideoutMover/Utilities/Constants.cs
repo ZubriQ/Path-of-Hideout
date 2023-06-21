@@ -1,4 +1,4 @@
-﻿namespace PathOfHideout.Utilities;
+﻿namespace PathOfHideout.HideoutMover.Utilities;
 
 /// <summary>
 /// Initial parameters that work for hideouts
