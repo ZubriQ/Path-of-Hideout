@@ -10,7 +10,8 @@
                 <Canvas Width="24"
                         Height="24"
                         Margin="6">
-                    <Path Fill="{DynamicResource Silver600Brush}"
+                    <Path x:Name="vectorImage"
+                          Fill="{DynamicResource Silver600Brush}"
                           Data="M19,13H5V11H19V13Z" />
                 </Canvas>
             </Viewbox>
@@ -22,6 +23,9 @@
                 <Setter TargetName="BtnMinimize"
                         Property="Background"
                         Value="{DynamicResource Silver700Brush}" />
+                <Setter TargetName="vectorImage"
+                        Property="Fill"
+                        Value="{DynamicResource Silver400Brush}" />
             </Trigger>
 
             <Trigger Property="IsPressed"

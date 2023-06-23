@@ -18,7 +18,8 @@
     <Color x:Key="Silver700">#414346</Color>
     <Color x:Key="Silver800">#2E2F32</Color>
     <Color x:Key="Silver900">#222325</Color>
-    <Color x:Key="Silver950">#1E1E1F</Color>
+    <Color x:Key="Silver925">#1C1C1D</Color>
+    <Color x:Key="Silver950">#161617</Color>
 
     <SolidColorBrush x:Key="PrimaryBrush"
                      Color="{StaticResource Primary}" />
@@ -54,6 +55,8 @@
                      Color="{StaticResource Silver800}" />
     <SolidColorBrush x:Key="Silver900Brush"
                      Color="{StaticResource Silver900}" />
+    <SolidColorBrush x:Key="Silver925Brush"
+                     Color="{StaticResource Silver925}" />
     <SolidColorBrush x:Key="Silver950Brush"
                      Color="{StaticResource Silver950}" />
 
