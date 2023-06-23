@@ -72,10 +72,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ResizeGrip}">
-                    <Path Width="20"
-                          Height="20"
+                    <Path Width="27"
+                          Height="27"
                           Fill="{StaticResource Silver600Brush}"
-                          Data="M18,16V13H15V22H13V2H15V11H18V8L22,12L18,16M2,12L6,16V13H9V22H11V2H9V11H6V8L2,12Z" />
+                          Data="M22,22H20V20H22V22M22,18H20V16H22V18M18,22H16V20H18V22M18,18H16V16H18V18M14,22H12V20H14V22M22,14H20V12H22V14Z" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
