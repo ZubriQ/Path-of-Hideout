@@ -1,4 +1,6 @@
-﻿using PathOfHideout.HideoutMover.Services;
+﻿using Microsoft.Win32;
+using PathOfHideout.HideoutMover.Services;
+using PathOfHideout.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PathOfHideout.Windows;
 
@@ -43,12 +44,32 @@ public partial class MainWindow : Window
 
     private void BtnFindFile_Click(object sender, RoutedEventArgs e)
     {
+        OpenFileDialog openDialog = new OpenFileDialog();
+        openDialog.Filter = "Hideout Files (*.hideout)|*.hideout|All Files (*.*)|*.*";
+        openDialog.Title = "Choose Hideout File Path";
 
+        var result = openDialog.ShowDialog();
+        if (result == true)
+        {
+            string filePath = openDialog.FileName;
+            TxtHideoutSourceFilePath.Text = filePath;
+            TxtHideoutDestinationPath.Text = filePath;
+        }
     }
 
     private void BtnSaveAs_Click(object sender, RoutedEventArgs e)
     {
+        // TODO: if source is empty, select source first
 
+        SaveFileDialog destinationDialog = new SaveFileDialog();
+        destinationDialog.Filter = "Hideout Files (*.hideout)|*.hideout";
+        destinationDialog.Title = "Choose Hideout File Path Destination";
+
+        var result = destinationDialog.ShowDialog();
+        if (result == true)
+        {
+            TxtHideoutDestinationPath.Text = destinationDialog.FileName;
+        }
     }
 
     private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
@@ -83,4 +104,12 @@ public partial class MainWindow : Window
     }
 
     #endregion
+
+    private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        BtnMoveDecorations.IsEnabled =
+            XyCoordinateValidator.IsValid(TxtXCoordinate.Text, TxtYCoordinate.Text)
+            && !string.IsNullOrWhiteSpace(TxtHideoutSourceFilePath.Text)
+            && !string.IsNullOrWhiteSpace(TxtHideoutDestinationPath.Text);
+    }
 }
