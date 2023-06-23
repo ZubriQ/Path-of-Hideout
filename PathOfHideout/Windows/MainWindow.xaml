@@ -74,7 +74,7 @@
                         <RowDefinition Height="16" />
                         <!-- UI -->
                         <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" /> 
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />

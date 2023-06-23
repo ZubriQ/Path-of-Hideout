@@ -62,7 +62,7 @@ public partial class MainWindow : Window
         // TODO: if source is empty, select source first
 
         SaveFileDialog destinationDialog = new SaveFileDialog();
-        destinationDialog.Filter = "Hideout Files (*.hideout)|*.hideout";
+        destinationDialog.Filter = "Hideout Files (*.hideout)|*.hideout|All Files (*.*)|*.*";
         destinationDialog.Title = "Choose Hideout File Path Destination";
 
         var result = destinationDialog.ShowDialog();

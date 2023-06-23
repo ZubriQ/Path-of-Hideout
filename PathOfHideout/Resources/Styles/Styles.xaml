@@ -67,4 +67,17 @@
         <Setter Property="FontSize"
                 Value="14" />
     </Style>
+
+    <Style TargetType="ResizeGrip">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ResizeGrip}">
+                    <Path Width="20"
+                          Height="20"
+                          Fill="{StaticResource Silver600Brush}"
+                          Data="M18,16V13H15V22H13V2H15V11H18V8L22,12L18,16M2,12L6,16V13H9V22H11V2H9V11H6V8L2,12Z" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
