@@ -35,7 +35,7 @@
         <Setter Property="VerticalContentAlignment"
                 Value="Center" />
         <Setter Property="Height"
-                Value="32" />
+                Value="30" />
         <Setter Property="FontSize"
                 Value="14" />
         <Setter Property="Padding"
@@ -59,13 +59,11 @@
         </Setter>
     </Style>
 
-    <Style TargetType="TextBlock">
+    <Style TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize"
-                Value="14" />
+                Value="16" />
         <Setter Property="Foreground"
                 Value="{StaticResource Silver200Brush}" />
-        <Setter Property="FontSize"
-                Value="14" />
     </Style>
 
     <Style TargetType="ResizeGrip">

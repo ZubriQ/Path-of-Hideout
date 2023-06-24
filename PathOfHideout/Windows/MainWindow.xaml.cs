@@ -76,11 +76,26 @@ public partial class MainWindow : Window
     {
         // TODO: Validation
 
-        _hideoutMover.MoveDecorations(
+        var response = _hideoutMover.MoveDecorations(
             TxtHideoutSourceFilePath.Text,
             int.Parse(TxtXCoordinate.Text),
             int.Parse(TxtYCoordinate.Text),
             TxtHideoutDestinationPath.Text);
+
+
+    }
+
+    private void UpdateStatusLabelText()
+    {
+
+    }
+
+    private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        BtnMoveDecorations.IsEnabled =
+            XyCoordinateValidator.IsValid(TxtXCoordinate.Text, TxtYCoordinate.Text)
+            && !string.IsNullOrWhiteSpace(TxtHideoutSourceFilePath.Text)
+            && !string.IsNullOrWhiteSpace(TxtHideoutDestinationPath.Text);
     }
 
     #region Default UI behaviour
@@ -104,12 +119,4 @@ public partial class MainWindow : Window
     }
 
     #endregion
-
-    private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
-    {
-        BtnMoveDecorations.IsEnabled =
-            XyCoordinateValidator.IsValid(TxtXCoordinate.Text, TxtYCoordinate.Text)
-            && !string.IsNullOrWhiteSpace(TxtHideoutSourceFilePath.Text)
-            && !string.IsNullOrWhiteSpace(TxtHideoutDestinationPath.Text);
-    }
 }

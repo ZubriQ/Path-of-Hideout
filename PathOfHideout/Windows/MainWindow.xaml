@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:PathOfHideout"
         mc:Ignorable="d"
         Title="Path of Hideout"
-        Height="390"
+        Height="400"
         Width="280"
         MaxWidth="800"
-        MaxHeight="390"
+        MaxHeight="400"
         MinWidth="260"
-        MinHeight="390"
+        MinHeight="400"
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
@@ -108,7 +108,7 @@
                 <Grid Margin="5">
                     <Grid.RowDefinitions>
                         <!-- Status bar -->
-                        <RowDefinition Height="16" />
+                        <RowDefinition Height="18" />
                         <!-- UI -->
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -116,6 +116,14 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
+                    
+                    <!-- Status label -->
+                    <TextBlock Text="TxtStatus"
+                               x:Name="LblStatus"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="12"
+                               Foreground="{StaticResource Silver300Brush}" />
 
                     <!-- Source File Path -->
                     <StackPanel Grid.Row="1"
@@ -187,7 +195,7 @@
                                 Content="MOVE"
                                 Background="{StaticResource PrimaryBrush}"
                                 Margin="5"
-                                Width="158"
+                                Width="160"
                                 Template="{StaticResource DefaultButton}"
                                 IsEnabled="False"
                                 Click="BtnMoveDecorations_Click" />
