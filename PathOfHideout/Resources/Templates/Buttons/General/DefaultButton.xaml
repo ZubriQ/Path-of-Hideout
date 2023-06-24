@@ -16,22 +16,40 @@
                             FontFamily="Inter"
                             FontSize="16"
                             FontWeight="SemiBold"
-                            VerticalContentAlignment="Center" 
+                            VerticalContentAlignment="Center"
                             Focusable="False" />
         </Border>
 
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver"
-                     Value="true">
+                     Value="True">
                 <Setter TargetName="BtnDefault"
                         Property="Background"
                         Value="{StaticResource PrimaryDarkBrush1}" />
             </Trigger>
+
             <Trigger Property="IsPressed"
-                     Value="true">
-                <Setter TargetName="BtnDefault"
-                        Property="Background"
-                        Value="{StaticResource PrimaryDarkBrush2}" />
+                     Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="BtnDefault"
+                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="{StaticResource PrimaryDark2}"
+                                            Duration="0:0:0.15" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="BtnDefault"
+                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="{StaticResource PrimaryDark1}"
+                                            Duration="0:0:0.1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
             </Trigger>
 
             <Trigger Property="IsEnabled"

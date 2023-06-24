@@ -18,7 +18,7 @@
     <Color x:Key="Silver700">#414346</Color>
     <Color x:Key="Silver800">#2E2F32</Color>
     <Color x:Key="Silver900">#222325</Color>
-    <Color x:Key="Silver925">#1C1C1D</Color>
+    <Color x:Key="Silver925">#1B1B1C</Color>
     <Color x:Key="Silver950">#161617</Color>
 
     <SolidColorBrush x:Key="PrimaryBrush"
