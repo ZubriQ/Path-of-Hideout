@@ -15,7 +15,6 @@
     <Folder Include="Resources\Images\" />
     <Folder Include="Resources\Fonts\" />
     <Folder Include="Resources\AppIcon\" />
-    <Folder Include="Resources\UserControls\" />
   </ItemGroup>
 
 </Project>

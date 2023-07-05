@@ -1,5 +1,7 @@
 ﻿using Microsoft.Win32;
+using PathOfHideout.Helpers;
 using PathOfHideout.HideoutMover.Services;
+using PathOfHideout.HideoutMover.Utilities;
 using PathOfHideout.Validation;
 using System;
 using System.Collections.Generic;
@@ -42,33 +44,84 @@ public partial class MainWindow : Window
         TxtYCoordinate.Text = "-10";
     }
 
+    #region Button Find File
+
     private void BtnFindFile_Click(object sender, RoutedEventArgs e)
     {
-        OpenFileDialog openDialog = new OpenFileDialog();
-        openDialog.Filter = "Hideout Files (*.hideout)|*.hideout|All Files (*.*)|*.*";
-        openDialog.Title = "Choose Hideout File Path";
+        var response = SelectHideoutFile();
+        UpdateStatusText(response);
+    }
 
+    private void UpdateStatusText(FileStatus status)
+    {
+        if (status == FileStatus.SourceSelected)
+        {
+            TxtStatus.Text = "hideout file found successfully";
+        }
+        else
+        {
+            TxtStatus.Text = "hideout file path not set";
+        }
+    }
+
+    private FileStatus SelectHideoutFile()
+    {
+        OpenFileDialog openDialog = GetOpenFileDialog();
         var result = openDialog.ShowDialog();
         if (result == true)
         {
-            string filePath = openDialog.FileName;
-            TxtHideoutSourceFilePath.Text = filePath;
-            TxtHideoutDestinationPath.Text = filePath;
+            UpdateTextBoxesPaths(openDialog.FileName);
+            return FileStatus.SourceSelected;
+        }
+        else
+        {
+            return FileStatus.SourceSelected;
         }
     }
+
+    private OpenFileDialog GetOpenFileDialog()
+    {
+        return new OpenFileDialog()
+        {
+            Title = "Choose Hideout File Path",
+            Filter = "Hideout Files (*.hideout)|*.hideout"
+        };
+    }
+
+    private void UpdateTextBoxesPaths(string filePath)
+    {
+        TxtHideoutSourceFilePath.Text = filePath;
+        TxtHideoutDestinationPath.Text = filePath;
+    }
+
+    #endregion
 
     private void BtnSaveAs_Click(object sender, RoutedEventArgs e)
     {
         // TODO: if source is empty, select source first
+        var response = SelectSaveAsPath();
 
+        if (response == FileStatus.DestinationSelected)
+        {
+            TxtStatus.Text = "destination selected successfully";
+        }
+    }
+
+    private FileStatus SelectSaveAsPath()
+    {
         SaveFileDialog destinationDialog = new SaveFileDialog();
-        destinationDialog.Filter = "Hideout Files (*.hideout)|*.hideout|All Files (*.*)|*.*";
+        destinationDialog.Filter = "Hideout Files (*.hideout)|*.hideout";
         destinationDialog.Title = "Choose Hideout File Path Destination";
 
         var result = destinationDialog.ShowDialog();
         if (result == true)
         {
             TxtHideoutDestinationPath.Text = destinationDialog.FileName;
+            return FileStatus.DestinationSelected;
+        }
+        else
+        {
+            return FileStatus.DestinationNotSelected;
         }
     }
 
@@ -82,12 +135,12 @@ public partial class MainWindow : Window
             int.Parse(TxtYCoordinate.Text),
             TxtHideoutDestinationPath.Text);
 
-
+        UpdateStatusText(response);
     }
 
-    private void UpdateStatusLabelText()
+    private void UpdateStatusText(HideoutMoveStatus status)
     {
-
+        TxtStatus.Text = StatusTextHelper.GetStatusMessage(status);
     }
 
     private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)

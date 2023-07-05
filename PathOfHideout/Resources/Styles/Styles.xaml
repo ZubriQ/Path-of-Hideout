@@ -4,8 +4,6 @@
     <Style TargetType="Button">
         <Setter Property="Background"
                 Value="{StaticResource PrimaryBrush}" />
-        <Setter Property="Foreground"
-                Value="{StaticResource WhiteBrush}" />
         <Setter Property="Height"
                 Value="32" />
         <Setter Property="Focusable"

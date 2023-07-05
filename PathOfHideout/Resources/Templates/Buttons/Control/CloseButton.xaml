@@ -20,14 +20,14 @@
 
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver"
-                     Value="true">
+                     Value="True">
                 <Setter TargetName="BtnClose"
                         Property="Background"
                         Value="{DynamicResource Silver800Brush}" />
             </Trigger>
 
             <Trigger Property="IsPressed"
-                     Value="true">
+                     Value="True">
                 <Setter TargetName="BtnClose"
                         Property="Background"
                         Value="{DynamicResource WarningLightBrush}" />

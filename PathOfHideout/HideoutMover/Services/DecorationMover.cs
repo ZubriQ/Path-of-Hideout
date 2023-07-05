@@ -11,7 +11,7 @@ public class DecorationMover
     private InitialParameters _initialParameters = null!;
     private Hideout? _hideout;
 
-    public MoverStatus MoveDecorations(string source, int xChange, int yChange, string? destination = "")
+    public HideoutMoveStatus MoveDecorations(string source, int xChange, int yChange, string? destination = "")
     {
         _initialParameters = new InitialParameters(source, xChange, yChange, destination);
 
@@ -21,19 +21,19 @@ public class DecorationMover
         return response;
     }
 
-    private MoverStatus ReadHideoutFileAndUpdateDecorationsCoordinates()
+    private HideoutMoveStatus ReadHideoutFileAndUpdateDecorationsCoordinates()
     {
         string hideoutJson;
 
         if (!File.Exists(_initialParameters.Source))
         {
-            return MoverStatus.FileNotFound;
+            return HideoutMoveStatus.FileNotFound;
         }
 
         hideoutJson = File.ReadAllText(_initialParameters.Source);
         if (string.IsNullOrEmpty(hideoutJson))
         {
-            return MoverStatus.FileEmpty;
+            return HideoutMoveStatus.FileEmpty;
         }
 
         try
@@ -42,11 +42,11 @@ public class DecorationMover
         }
         catch
         {
-            return MoverStatus.FileParseFailed;
+            return HideoutMoveStatus.FileParseFailed;
         }
 
         UpdateDecorations();
-        return MoverStatus.Success;
+        return HideoutMoveStatus.Success;
     }
 
     private void UpdateDecorations()

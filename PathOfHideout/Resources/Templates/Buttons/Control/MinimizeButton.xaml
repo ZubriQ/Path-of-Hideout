@@ -19,7 +19,7 @@
 
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver"
-                     Value="true">
+                     Value="True">
                 <Setter TargetName="BtnMinimize"
                         Property="Background"
                         Value="{DynamicResource Silver700Brush}" />
@@ -29,7 +29,7 @@
             </Trigger>
 
             <Trigger Property="IsPressed"
-                     Value="true">
+                     Value="True">
                 <Setter TargetName="BtnMinimize"
                         Property="Background"
                         Value="{DynamicResource Silver800Brush}" />

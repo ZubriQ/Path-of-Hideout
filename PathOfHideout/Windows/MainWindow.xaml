@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:PathOfHideout"
         mc:Ignorable="d"
         Title="Path of Hideout"
-        Height="390"
+        Height="370"
         Width="280"
         MaxWidth="800"
-        MaxHeight="390"
+        MaxHeight="370"
         MinWidth="260"
-        MinHeight="390"
+        MinHeight="370"
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
+    
     <!-- Window's gray highlight -->
     <Border CornerRadius="8">
         <Border.Background>
@@ -56,7 +57,8 @@
                                     Height="28"
                                     Width="36"
                                     Template="{StaticResource MinimizeButton}"
-                                    Click="BtnMinimize_Click" />
+                                    Click="BtnMinimize_Click"
+                                    ToolTip="Settings"/>
                             <Button x:Name="BtnClose"
                                     Height="28"
                                     Width="36"
@@ -67,6 +69,7 @@
                 </Border>
             </DockPanel>
 
+             <!--also highlight buttons' fill-->
             <!-- Menu -->
             <Border Grid.Row="1"
                     Background="{StaticResource Silver925Brush}"
@@ -118,16 +121,15 @@
                     </Grid.RowDefinitions>
                     
                     <!-- Status label -->
-                    <TextBlock Text="Status text"
-                               x:Name="TxtStatus"
+                    <TextBlock x:Name="TxtStatus"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               FontSize="12"
+                               FontSize="11"
                                Foreground="{StaticResource Silver300Brush}" />
 
                     <!-- Source File Path -->
                     <StackPanel Grid.Row="1"
-                                Margin="5">
+                                Margin="2">
                         <TextBlock Text="Hideout file path:"
                                    Margin="3,3,3,0" />
                         <TextBox x:Name="TxtHideoutSourceFilePath"
@@ -144,7 +146,7 @@
 
                     <!-- Destination File Path -->
                     <StackPanel Grid.Row="2"
-                                Margin="5">
+                                Margin="2">
                         <TextBlock Text="Save to:"
                                    Margin="3,3,3,0" />
                         <TextBox x:Name="TxtHideoutDestinationPath"
@@ -161,12 +163,12 @@
 
                     <!-- X, Y -->
                     <DockPanel Grid.Row="3"
-                               Margin="5">
+                               Margin="2">
                         <StackPanel>
                             <TextBlock Text="X:"
                                        Margin="3,3,3,0" />
                             <TextBox x:Name="TxtXCoordinate"
-                                     Width="50"
+                                     Width="45"
                                      HorizontalContentAlignment="Center"
                                      HorizontalAlignment="Left"
                                      MaxLength="4"
@@ -178,7 +180,7 @@
                             <TextBlock Text="Y:"
                                        Margin="3,3,3,0" />
                             <TextBox x:Name="TxtYCoordinate"
-                                     Width="50"
+                                     Width="45"
                                      HorizontalContentAlignment="Center"
                                      HorizontalAlignment="Left"
                                      MaxLength="4"
@@ -190,10 +192,9 @@
                     <!-- Update button -->
                     <StackPanel Grid.Row="5"
                                 VerticalAlignment="Center"
-                                Margin="5">
+                                Margin="2">
                         <Button x:Name="BtnMoveDecorations"
                                 Content="MOVE"
-                                Background="{StaticResource PrimaryBrush}"
                                 Margin="5"
                                 Width="160"
                                 Template="{StaticResource DefaultButton}"
