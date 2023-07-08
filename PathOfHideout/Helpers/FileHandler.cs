@@ -4,19 +4,16 @@ namespace PathOfHideout.Helpers;
 
 public class FileHandler
 {
-    public FileStatus SelectHideoutFile()
-    {
-        OpenFileDialog openDialog = GetOpenFileDialog();
-        var result = openDialog.ShowDialog();
+    private readonly OpenFileDialog _openDialog;
+    private readonly SaveFileDialog _saveDialog;
 
-        if (result == true)
-        {
-            return FileStatus.SourceSelected;
-        }
-        return FileStatus.SourceSelectionCancelled;
+    public FileHandler()
+    {
+        _openDialog = InitializeOpenFileDialog();
+        _saveDialog = InitializeSaveFileDialog();
     }
 
-    private static OpenFileDialog GetOpenFileDialog()
+    private static OpenFileDialog InitializeOpenFileDialog()
     {
         return new OpenFileDialog()
         {
@@ -25,24 +22,32 @@ public class FileHandler
         };
     }
 
-    public (FileStatus, string) SelectDestinationPath()
-    {
-        SaveFileDialog destinationDialog = GetSaveFileDialog();
-        var result = destinationDialog.ShowDialog();
-
-        if (result == true)
-        {
-            return (FileStatus.DestinationSelected, destinationDialog.FileName);
-        }
-        return (FileStatus.DestinationSelectionCancelled, string.Empty);
-    }
-
-    private static SaveFileDialog GetSaveFileDialog()
+    private static SaveFileDialog InitializeSaveFileDialog()
     {
         return new SaveFileDialog()
         {
             Title = "Choose Hideout File Path Destination",
             Filter = "Hideout Files (*.hideout)|*.hideout"
         };
+    }
+
+    public FileStatus SelectHideoutFile()
+    {
+        var result = _openDialog.ShowDialog();
+        if (result == true)
+        {
+            return FileStatus.SourceSelected;
+        }
+        return FileStatus.SourceSelectionCancelled;
+    }
+
+    public (FileStatus, string) SelectDestinationPath()
+    {
+        var result = _saveDialog.ShowDialog();
+        if (result == true)
+        {
+            return (FileStatus.DestinationSelected, _saveDialog.FileName);
+        }
+        return (FileStatus.DestinationSelectionCancelled, string.Empty);
     }
 }
