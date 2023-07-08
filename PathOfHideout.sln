@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathOfHideout", "PathOfHideout\PathOfHideout.csproj", "{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathOfHideout", "src\PathOfHideout\PathOfHideout.csproj", "{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB9C29AB-76C3-4217-AFC0-27AA5893B311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFEE36C4-6A62-4DA4-85C3-02EC778FFBAD} = {AB9C29AB-76C3-4217-AFC0-27AA5893B311}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {906D6E76-BDF4-4914-B4FD-5FE3B50B4261}
