@@ -32,7 +32,7 @@
                         Value="{DynamicResource WarningLightBrush}"/>
                 <Setter TargetName="vectorImage"
                         Property="Fill"
-                        Value="{DynamicResource Silver800Brush}"/>
+                        Value="{DynamicResource Silver100Brush}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

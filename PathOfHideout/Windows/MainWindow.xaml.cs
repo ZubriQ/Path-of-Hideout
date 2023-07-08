@@ -1,7 +1,5 @@
-﻿using Microsoft.Win32;
-using PathOfHideout.Helpers;
+﻿using PathOfHideout.Helpers;
 using PathOfHideout.HideoutMover.Services;
-using PathOfHideout.HideoutMover.Utilities;
 using PathOfHideout.Validation;
 using System;
 using System.Collections.Generic;
