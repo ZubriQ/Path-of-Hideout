@@ -76,10 +76,21 @@ public partial class MainWindow : Window
 
     private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
     {
-        BtnMoveDecorations.IsEnabled =
-            XyCoordinateValidator.IsValid(TxtXCoordinate.Text, TxtYCoordinate.Text)
-            && FilePathValidator.IsValid(TxtHideoutSourceFilePath.Text)
-            && FilePathValidator.IsValid(TxtHideoutDestinationPath.Text);
+        BtnMoveDecorations.IsEnabled = ValidateMoveDecorationsInput();
+    }
+
+    private bool ValidateMoveDecorationsInput()
+    {
+        string xCoordinate = TxtXCoordinate.Text;
+        string yCoordinate = TxtYCoordinate.Text;
+        string sourceFilePath = TxtHideoutSourceFilePath.Text;
+        string destinationPath = TxtHideoutDestinationPath.Text;
+
+        bool isXyCoordinateValid = XyCoordinateValidator.IsValid(xCoordinate, yCoordinate);
+        bool isSourceFilePathValid = FilePathValidator.IsValid(sourceFilePath);
+        bool isDestinationPathValid = FilePathValidator.IsValid(destinationPath);
+
+        return isXyCoordinateValid && isSourceFilePathValid && isDestinationPathValid;
     }
 
     #region Default UI behaviour
