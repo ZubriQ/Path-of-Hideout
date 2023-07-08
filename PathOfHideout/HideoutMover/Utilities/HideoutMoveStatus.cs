@@ -2,7 +2,7 @@
 
 public enum HideoutMoveStatus
 {
-    None = 0,
+    None,
     Success,
     Fail,
     FileEmpty,

@@ -22,17 +22,17 @@
     <Border CornerRadius="8">
         <Border.Background>
             <SolidColorBrush Color="{StaticResource Silver700}"
-                             Opacity="0.8" />
+                             Opacity="0.8"/>
         </Border.Background>
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition />
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
-                <ColumnDefinition />
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <!-- Title bar -->
@@ -49,7 +49,7 @@
                                    Foreground="{StaticResource Silver200Brush}"
                                    Margin="10,0,0,0"
                                    FontWeight="DemiBold"
-                                   FontSize="14" />
+                                   FontSize="14"/>
 
                         <!-- Buttons -->
                         <DockPanel HorizontalAlignment="Right">
@@ -58,18 +58,18 @@
                                     Width="36"
                                     Template="{StaticResource MinimizeButton}"
                                     Click="BtnMinimize_Click"
-                                    ToolTip="Settings"/>
+                                    ToolTip="Minimize"/>
                             <Button x:Name="BtnClose"
                                     Height="28"
                                     Width="36"
                                     Template="{StaticResource CloseButton}"
-                                    Click="BtnClose_Click" />
+                                    Click="BtnClose_Click"
+                                    ToolTip="Close"/>
                         </DockPanel>
                     </DockPanel>
                 </Border>
             </DockPanel>
 
-             <!--also highlight buttons' fill-->
             <!-- Menu -->
             <Border Grid.Row="1"
                     Background="{StaticResource Silver925Brush}"
@@ -79,22 +79,24 @@
                 <StackPanel>
                     <Button x:Name="BtnSettings"
                             Template="{StaticResource MenuButton}"
-                            Margin="5">
+                            Margin="5"
+                            ToolTip="Settings">
                         <Button.Content>
                             <Path Width="24"
                                   Height="24"
                                   Fill="{StaticResource Silver500Brush}"
-                                  Data="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                                  Data="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
                         </Button.Content>
                     </Button>
                     <Button x:Name="BtnAbout"
                             Template="{StaticResource MenuButton}"
-                            Margin="5,0,5,5">
+                            Margin="5,0,5,5"
+                            ToolTip="Help">
                         <Button.Content>
                             <Path Width="24"
                                   Height="24"
                                   Fill="{StaticResource Silver500Brush}"
-                                  Data="M13.5,4A1.5,1.5 0 0,0 12,5.5A1.5,1.5 0 0,0 13.5,7A1.5,1.5 0 0,0 15,5.5A1.5,1.5 0 0,0 13.5,4M13.14,8.77C11.95,8.87 8.7,11.46 8.7,11.46C8.5,11.61 8.56,11.6 8.72,11.88C8.88,12.15 8.86,12.17 9.05,12.04C9.25,11.91 9.58,11.7 10.13,11.36C12.25,10 10.47,13.14 9.56,18.43C9.2,21.05 11.56,19.7 12.17,19.3C12.77,18.91 14.38,17.8 14.54,17.69C14.76,17.54 14.6,17.42 14.43,17.17C14.31,17 14.19,17.12 14.19,17.12C13.54,17.55 12.35,18.45 12.19,17.88C12,17.31 13.22,13.4 13.89,10.71C14,10.07 14.3,8.67 13.14,8.77Z" />
+                                  Data="M13.5,4A1.5,1.5 0 0,0 12,5.5A1.5,1.5 0 0,0 13.5,7A1.5,1.5 0 0,0 15,5.5A1.5,1.5 0 0,0 13.5,4M13.14,8.77C11.95,8.87 8.7,11.46 8.7,11.46C8.5,11.61 8.56,11.6 8.72,11.88C8.88,12.15 8.86,12.17 9.05,12.04C9.25,11.91 9.58,11.7 10.13,11.36C12.25,10 10.47,13.14 9.56,18.43C9.2,21.05 11.56,19.7 12.17,19.3C12.77,18.91 14.38,17.8 14.54,17.69C14.76,17.54 14.6,17.42 14.43,17.17C14.31,17 14.19,17.12 14.19,17.12C13.54,17.55 12.35,18.45 12.19,17.88C12,17.31 13.22,13.4 13.89,10.71C14,10.07 14.3,8.67 13.14,8.77Z"/>
                         </Button.Content>
                     </Button>
                 </StackPanel>
@@ -111,13 +113,13 @@
                 <Grid Margin="5">
                     <Grid.RowDefinitions>
                         <!-- Status bar -->
-                        <RowDefinition Height="18" />
+                        <RowDefinition Height="18"/>
                         <!-- UI -->
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     
                     <!-- Status label -->
@@ -125,40 +127,44 @@
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                FontSize="11"
-                               Foreground="{StaticResource Silver300Brush}" />
+                               Foreground="{StaticResource Silver300Brush}"/>
 
                     <!-- Source File Path -->
                     <StackPanel Grid.Row="1"
                                 Margin="2">
                         <TextBlock Text="Hideout file path:"
-                                   Margin="3,3,3,0" />
+                                   Margin="3,3,3,0"/>
                         <TextBox x:Name="TxtHideoutSourceFilePath"
                                  MaxLength="256"
                                  Margin="3"
-                                 TextChanged="MoveDecorationsValidation_TextChanged" />
+                                 TextChanged="MoveDecorationsValidation_TextChanged"
+                                 ToolTip="Use Find file button or enter the .hideout file path manually"/>
                         <Button x:Name="BtnFindFile"
                                 Content="Find file"
                                 Margin="3"
                                 HorizontalAlignment="Left"
                                 Template="{StaticResource DefaultButton}"
-                                Click="BtnFindFile_Click" />
+                                Click="BtnFindFile_Click" 
+                                ToolTip="Set hideout file path"/>
                     </StackPanel>
 
                     <!-- Destination File Path -->
                     <StackPanel Grid.Row="2"
                                 Margin="2">
                         <TextBlock Text="Save to:"
-                                   Margin="3,3,3,0" />
+                                   Margin="3,3,3,0"/>
                         <TextBox x:Name="TxtHideoutDestinationPath"
                                  MaxLength="256"
                                  Margin="3"
-                                 TextChanged="MoveDecorationsValidation_TextChanged" />
+                                 TextChanged="MoveDecorationsValidation_TextChanged"
+                                 ToolTip="Destination save location for the .hideout file"/>
                         <Button x:Name="BtnSaveAs"
                                 Content="Save as"
                                 Margin="3"
                                 HorizontalAlignment="Left"
                                 Template="{StaticResource DefaultButton}"
-                                Click="BtnSaveAs_Click" />
+                                Click="BtnSaveAs_Click"
+                                ToolTip="Change hideout file save location"/>
                     </StackPanel>
 
                     <!-- X, Y -->
@@ -166,26 +172,28 @@
                                Margin="2">
                         <StackPanel>
                             <TextBlock Text="X:"
-                                       Margin="3,3,3,0" />
+                                       Margin="3,3,3,0"/>
                             <TextBox x:Name="TxtXCoordinate"
                                      Width="45"
                                      HorizontalContentAlignment="Center"
                                      HorizontalAlignment="Left"
                                      MaxLength="4"
                                      Margin="3"
-                                     TextChanged="MoveDecorationsValidation_TextChanged" />
+                                     TextChanged="MoveDecorationsValidation_TextChanged"
+                                     ToolTip="The amount by which all decorations move"/>
                         </StackPanel>
 
                         <StackPanel Grid.Row="4">
                             <TextBlock Text="Y:"
-                                       Margin="3,3,3,0" />
+                                       Margin="3,3,3,0"/>
                             <TextBox x:Name="TxtYCoordinate"
                                      Width="45"
                                      HorizontalContentAlignment="Center"
                                      HorizontalAlignment="Left"
                                      MaxLength="4"
                                      Margin="3"
-                                     TextChanged="MoveDecorationsValidation_TextChanged" />
+                                     TextChanged="MoveDecorationsValidation_TextChanged"
+                                     ToolTip="The amount by which all decorations move"/>
                         </StackPanel>
                     </DockPanel>
 
@@ -199,7 +207,8 @@
                                 Width="160"
                                 Template="{StaticResource DefaultButton}"
                                 IsEnabled="False"
-                                Click="BtnMoveDecorations_Click" />
+                                Click="BtnMoveDecorations_Click"
+                                ToolTip="Move decorations by X and Y coordinates"/>
                     </StackPanel>
                 </Grid>
             </Border>

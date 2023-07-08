@@ -11,7 +11,7 @@
                 Width="32"
                 Height="32">
             <ContentPresenter HorizontalAlignment="Center"
-                              VerticalAlignment="Center" />
+                              VerticalAlignment="Center"/>
         </Border>
 
         <ControlTemplate.Triggers>
@@ -19,7 +19,7 @@
                      Value="True">
                 <Setter TargetName="BtnMenu"
                         Property="Background"
-                        Value="{StaticResource Silver800Brush}" />
+                        Value="{StaticResource Silver800Brush}"/>
             </Trigger>
 
             <Trigger Property="IsPressed"
@@ -30,7 +30,7 @@
                             <ColorAnimation Storyboard.TargetName="BtnMenu"
                                             Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                             To="{StaticResource Silver700}"
-                                            Duration="0:0:0.15" />
+                                            Duration="0:0:0.15"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
@@ -40,7 +40,7 @@
                             <ColorAnimation Storyboard.TargetName="BtnMenu"
                                             Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
                                             To="{StaticResource Silver800}"
-                                            Duration="0:0:0.1" />
+                                            Duration="0:0:0.1"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.ExitActions>

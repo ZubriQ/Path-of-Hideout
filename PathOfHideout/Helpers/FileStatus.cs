@@ -2,9 +2,9 @@
 
 public enum FileStatus
 {
-    None = 0,
+    None,
     SourceSelected,
-    SourceNotSelected,
+    SourceSelectionCancelled,
     DestinationSelected,
-    DestinationNotSelected,
+    DestinationSelectionCancelled
 }
