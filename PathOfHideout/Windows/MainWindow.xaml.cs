@@ -65,12 +65,12 @@ public partial class MainWindow : Window
 
     private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
     {
-        var response = _mover.MoveDecorations(
-            TxtHideoutSourceFilePath.Text,
-            int.Parse(TxtXCoordinate.Text),
-            int.Parse(TxtYCoordinate.Text),
-            TxtHideoutDestinationPath.Text);
+        string sourceFilePath = TxtHideoutSourceFilePath.Text;
+        int xCoordinate = int.Parse(TxtXCoordinate.Text);
+        int yCoordinate = int.Parse(TxtYCoordinate.Text);
+        string destinationPath = TxtHideoutDestinationPath.Text;
 
+        var response = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
         TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(response);
     }
 
