@@ -25,7 +25,7 @@ namespace PathOfHideout.Windows;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private readonly DecorationMover _hideoutMover = new();
+    private readonly DecorationMover _mover = new();
     private readonly FileHandler _fileHandler = new();
 
     public MainWindow()
@@ -52,16 +52,20 @@ public partial class MainWindow : Window
     {
         (FileStatus status, var newFileName) = _fileHandler.SelectDestinationPath();
         TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
+        UpdateDestinationPath(newFileName);
+    }
 
-        if (!string.IsNullOrEmpty(newFileName))
+    private void UpdateDestinationPath(string path)
+    {
+        if (!string.IsNullOrEmpty(path))
         {
-            TxtHideoutDestinationPath.Text = newFileName;
+            TxtHideoutDestinationPath.Text = path;
         }
     }
 
     private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
     {
-        var response = _hideoutMover.MoveDecorations(
+        var response = _mover.MoveDecorations(
             TxtHideoutSourceFilePath.Text,
             int.Parse(TxtXCoordinate.Text),
             int.Parse(TxtYCoordinate.Text),
@@ -74,8 +78,8 @@ public partial class MainWindow : Window
     {
         BtnMoveDecorations.IsEnabled =
             XyCoordinateValidator.IsValid(TxtXCoordinate.Text, TxtYCoordinate.Text)
-            && !string.IsNullOrWhiteSpace(TxtHideoutSourceFilePath.Text)
-            && !string.IsNullOrWhiteSpace(TxtHideoutDestinationPath.Text);
+            && FilePathValidator.IsValid(TxtHideoutSourceFilePath.Text)
+            && FilePathValidator.IsValid(TxtHideoutDestinationPath.Text);
     }
 
     #region Default UI behaviour
