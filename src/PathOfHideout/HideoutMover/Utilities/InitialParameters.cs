@@ -1,6 +1,6 @@
 namespace PathOfHideout.HideoutMover.Utilities;
 
-public class InitialParameters
+public sealed class InitialParameters
 {
     public string Source { get; }
     public string Destination { get; }

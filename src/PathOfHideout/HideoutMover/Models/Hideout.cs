@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PathOfHideout.HideoutMover.Models;
 
-internal class Hideout
+public sealed class Hideout
 {
     public Hideout()
     {

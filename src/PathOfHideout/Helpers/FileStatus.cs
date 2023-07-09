@@ -1,6 +1,6 @@
 ﻿namespace PathOfHideout.Helpers;
 
-public enum FileStatus
+internal enum FileStatus
 {
     None,
     SourceSelected,

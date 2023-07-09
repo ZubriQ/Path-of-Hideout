@@ -2,9 +2,9 @@
 
 namespace PathOfHideout.Helpers;
 
-public static class FileStatusResponseHelper
+internal static class FileStatusResponseHelper
 {
-    public static string GetStatusMessage(HideoutMoveStatus status)
+    internal static string GetStatusMessage(HideoutMoveStatus status)
     {
         return status switch
         {
@@ -17,7 +17,7 @@ public static class FileStatusResponseHelper
         };
     }
 
-    public static string GetStatusMessage(FileStatus status)
+    internal static string GetStatusMessage(FileStatus status)
     {
         return status switch
         {

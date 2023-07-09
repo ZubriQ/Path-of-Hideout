@@ -2,33 +2,15 @@
 
 namespace PathOfHideout.Helpers;
 
-public class FileHandler
+internal sealed class FileHandler
 {
     private readonly OpenFileDialog _openDialog;
     private readonly SaveFileDialog _saveDialog;
 
     public FileHandler()
     {
-        _openDialog = InitializeOpenFileDialog();
-        _saveDialog = InitializeSaveFileDialog();
-    }
-
-    private static OpenFileDialog InitializeOpenFileDialog()
-    {
-        return new OpenFileDialog()
-        {
-            Title = "Choose Hideout File Path",
-            Filter = "Hideout Files (*.hideout)|*.hideout"
-        };
-    }
-
-    private static SaveFileDialog InitializeSaveFileDialog()
-    {
-        return new SaveFileDialog()
-        {
-            Title = "Choose Hideout File Path Destination",
-            Filter = "Hideout Files (*.hideout)|*.hideout"
-        };
+        _openDialog = FileDialogInitializer.GetOpenFileDialog();
+        _saveDialog = FileDialogInitializer.GetSaveFileDialog();
     }
 
     public FileStatus SelectHideoutFile()

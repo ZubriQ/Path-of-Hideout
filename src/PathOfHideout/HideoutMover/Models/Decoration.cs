@@ -2,7 +2,7 @@
 
 namespace PathOfHideout.HideoutMover.Models;
 
-internal class Decoration
+public sealed class Decoration
 {
     [JsonProperty("hash")]
     public long Hash { get; set; }

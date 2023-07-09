@@ -6,7 +6,7 @@ using System.IO;
 
 namespace PathOfHideout.HideoutMover.Services;
 
-public class DecorationMover
+public sealed class DecorationMover
 {
     private InitialParameters _parameters = null!;
     private Hideout? _hideout;

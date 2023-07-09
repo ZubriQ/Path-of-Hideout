@@ -2,7 +2,7 @@
 
 namespace PathOfHideout.HideoutMover.Utilities;
 
-public class DuplicateKeyComparer<TKey> : IEqualityComparer<TKey>
+public sealed class DuplicateKeyComparer<TKey> : IEqualityComparer<TKey>
 {
     /// <summary>
     /// To allow duplicates, the dictionary enables storing
