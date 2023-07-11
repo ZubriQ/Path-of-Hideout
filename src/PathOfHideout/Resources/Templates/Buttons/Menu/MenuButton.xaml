@@ -10,8 +10,7 @@
                 CornerRadius="8"
                 Width="32"
                 Height="32">
-            <ContentPresenter HorizontalAlignment="Center"
-                              VerticalAlignment="Center"/>
+            <ContentPresenter />
         </Border>
 
         <ControlTemplate.Triggers>

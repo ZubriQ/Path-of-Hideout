@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Resources/Templates/Buttons/Control/MinimizeButton.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/Buttons/General/DefaultButton.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/Buttons/Menu/MenuButton.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/RadioButtons/MenuRadioButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -86,7 +86,7 @@
                             BorderBrush="{StaticResource Silver700Brush}"
                             BorderThickness="1"
                             CornerRadius="8">
-                        <ContentPresenter Margin="4"/>
+                        <ContentPresenter Margin="4" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
