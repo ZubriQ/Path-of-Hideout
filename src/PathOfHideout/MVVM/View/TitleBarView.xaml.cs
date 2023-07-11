@@ -6,9 +6,9 @@ namespace PathOfHideout.MVVM.View
     /// <summary>
     /// Interaction logic for TitleBar.xaml
     /// </summary>
-    public partial class TitleBar : UserControl
+    public partial class TitleBarView : UserControl
     {
-        public TitleBar()
+        public TitleBarView()
         {
             InitializeComponent();
         }

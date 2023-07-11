@@ -3,11 +3,11 @@
 namespace PathOfHideout.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for MenuView.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class MenuView : UserControl
     {
-        public Menu()
+        public MenuView()
         {
             InitializeComponent();
         }

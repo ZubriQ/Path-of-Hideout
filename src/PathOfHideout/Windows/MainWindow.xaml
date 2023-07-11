@@ -45,7 +45,7 @@
                     Background="{StaticResource Silver950Brush}"
                     CornerRadius="8,8,0,0"
                     MouseDown="BrdTitleBar_MouseDown">
-                <views:TitleBar x:Name="ViewTitleBar"/>
+                <views:TitleBarView x:Name="ViewTitleBar"/>
             </Border>
 
             <!-- Menu -->
@@ -54,7 +54,7 @@
                     Background="{StaticResource Silver925Brush}"
                     CornerRadius="0,0,0,8"
                     Margin="1,0,0,1">
-                <views:Menu x:Name="ViewMenu"/>
+                <views:MenuView x:Name="ViewMenu"/>
             </Border>
 
             <!-- Application -->
