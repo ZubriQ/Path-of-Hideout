@@ -42,8 +42,18 @@ public partial class MainWindow : Window
 
     private void BtnFindFile_Click(object sender, RoutedEventArgs e)
     {
-        var response = _fileHandler.SelectHideoutFile();
-        TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(response);
+        (FileStatus status, var newFileName) = _fileHandler.SelectHideoutFile();
+        TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
+        UpdateSourceAndDestinationPaths(newFileName);
+    }
+
+    private void UpdateSourceAndDestinationPaths(string path)
+    {
+        if (!string.IsNullOrEmpty(path))
+        {
+            TxtHideoutSourceFilePath.Text = path;
+            TxtHideoutDestinationPath.Text = path;
+        }
     }
 
     private void BtnSaveAs_Click(object sender, RoutedEventArgs e)
