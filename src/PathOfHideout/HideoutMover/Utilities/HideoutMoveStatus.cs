@@ -7,5 +7,6 @@ public enum HideoutMoveStatus
     Fail,
     FileEmpty,
     FileNotFound,
-    FileParseFailed
+    FileParseFailed,
+    FileWriteAccessDenied
 }

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PathOfHideout.HideoutMover.Models;
 using PathOfHideout.HideoutMover.Utilities;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -20,7 +21,11 @@ public sealed class DecorationMover
         _parameters = new InitialParameters(source, xChange, yChange, destination);
 
         var response = ReadHideoutFileAndUpdateDecorationsCoordinates();
-        SaveUpdatedHideout();
+        var saveFileResponse = SaveUpdatedHideout();
+        if (saveFileResponse is not HideoutMoveStatus.Success)
+        {
+            return saveFileResponse;
+        }
 
         return response;
     }
@@ -49,11 +54,10 @@ public sealed class DecorationMover
             return HideoutMoveStatus.FileParseFailed;
         }
 
-        UpdateDecorations();
-        return HideoutMoveStatus.Success;
+        return UpdateDecorations();
     }
 
-    private void UpdateDecorations()
+    private HideoutMoveStatus UpdateDecorations()
     {
         if (_hideout?.Decorations.Count > 0)
         {
@@ -62,6 +66,8 @@ public sealed class DecorationMover
                 UpdateDecorationXyValues(decoration);
             }
         }
+
+        return HideoutMoveStatus.Success;
     }
 
     private void UpdateDecorationXyValues(KeyValuePair<string, Decoration> decoration)
@@ -75,9 +81,17 @@ public sealed class DecorationMover
             yValue : decoration.Value.Y;
     }
 
-    private void SaveUpdatedHideout()
+    private HideoutMoveStatus SaveUpdatedHideout()
     {
         var updatedHideoutJson = JsonConvert.SerializeObject(_hideout);
-        File.WriteAllText(_parameters.Destination, updatedHideoutJson);
+        try
+        {
+            File.WriteAllText(_parameters.Destination, updatedHideoutJson);
+            return HideoutMoveStatus.Success;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return HideoutMoveStatus.FileWriteAccessDenied;
+        }
     }
 }

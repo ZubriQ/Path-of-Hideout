@@ -13,6 +13,7 @@ internal static class FileStatusResponseHelper
             HideoutMoveStatus.FileNotFound => "hideout file not found",
             HideoutMoveStatus.FileParseFailed => "could not load hideout file",
             HideoutMoveStatus.FileEmpty => "hideout file was empty",
+            HideoutMoveStatus.FileWriteAccessDenied => "write access to the path denied",
             _ => string.Empty
         };
     }
