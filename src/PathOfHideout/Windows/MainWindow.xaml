@@ -49,39 +49,38 @@
             </Grid.ColumnDefinitions>
 
             <!-- Title bar -->
-            <DockPanel Margin="1,1,1,0"
-                       Grid.ColumnSpan="2">
-                <Border x:Name="BrdTitleBar"
-                        Background="{StaticResource Silver950Brush}"
-                        CornerRadius="8,8,0,0"
-                        MouseDown="BrdTitleBar_MouseDown">
-                    <DockPanel Height="28">
-                        <!-- Header -->
-                        <TextBlock Text="Path of Hideout"
-                                   VerticalAlignment="Center"
-                                   Foreground="{StaticResource Silver200Brush}"
-                                   Margin="10,0,0,0"
-                                   FontWeight="DemiBold"
-                                   FontSize="14"/>
+            <Border Grid.ColumnSpan="2"
+                    x:Name="BrdTitleBar"
+                    Margin="1,1,1,0"
+                    Background="{StaticResource Silver950Brush}"
+                    CornerRadius="8,8,0,0"
+                    MouseDown="BrdTitleBar_MouseDown">
+                <DockPanel Height="28">
+                    <!-- Header -->
+                    <TextBlock Text="Path of Hideout"
+                               VerticalAlignment="Center"
+                               Foreground="{StaticResource Silver200Brush}"
+                               Margin="10,0,0,0"
+                               FontWeight="DemiBold"
+                               FontSize="14" />
 
-                        <!-- Buttons -->
-                        <DockPanel HorizontalAlignment="Right">
-                            <Button x:Name="BtnMinimize"
-                                    Height="28"
-                                    Width="36"
-                                    Template="{StaticResource MinimizeButton}"
-                                    Click="BtnMinimize_Click"
-                                    ToolTip="Minimize"/>
-                            <Button x:Name="BtnClose"
-                                    Height="28"
-                                    Width="36"
-                                    Template="{StaticResource CloseButton}"
-                                    Click="BtnClose_Click"
-                                    ToolTip="Close"/>
-                        </DockPanel>
+                    <!-- Buttons -->
+                    <DockPanel HorizontalAlignment="Right">
+                        <Button x:Name="BtnMinimize"
+                                Height="28"
+                                Width="36"
+                                Template="{StaticResource MinimizeButton}"
+                                Click="BtnMinimize_Click"
+                                ToolTip="Minimize" />
+                        <Button x:Name="BtnClose"
+                                Height="28"
+                                Width="36"
+                                Template="{StaticResource CloseButton}"
+                                Click="BtnClose_Click"
+                                ToolTip="Close" />
                     </DockPanel>
-                </Border>
-            </DockPanel>
+                </DockPanel>
+            </Border>
 
             <!-- Menu -->
             <Border Grid.Row="1" 
