@@ -3,8 +3,7 @@
     <ControlTemplate TargetType="{x:Type RadioButton}"
                      x:Key="MenuRadioButton">
         <Border x:Name="RadBtnBorder"
-                CornerRadius="8"
-                Cursor="Hand">
+                CornerRadius="8">
             <Border.Background>
                 <SolidColorBrush x:Name="RadBtnBorderBackground"
                                  Color="{StaticResource Silver900}" />
@@ -36,6 +35,8 @@
                     <Setter TargetName="RadBtnBorder"
                             Property="Background"
                             Value="{StaticResource Silver800Brush}" />
+                    <Setter Property="Cursor"
+                            Value="Hand" />
                 </MultiTrigger.Setters>
             </MultiTrigger>
             
