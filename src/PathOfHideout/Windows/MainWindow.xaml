@@ -89,7 +89,7 @@
                     CornerRadius="0,0,0,8"
                     Margin="1,0,0,1">
                 <StackPanel>
-                    <RadioButton x:Name="RadBtnHome"
+                    <RadioButton x:Name="RadBtnHomePage"
                                  GroupName="Menu"
                                  Margin="5"
                                  ToolTip="Path of Hideout"
@@ -104,7 +104,7 @@
                     <RadioButton x:Name="RadBtnSettings"
                                  GroupName="Menu"
                                  Margin="5,0,5,5"
-                                 ToolTip="Path of Hideout"
+                                 ToolTip="Settings"
                                  Template="{StaticResource MenuRadioButton}">
                         <RadioButton.Content>
                             <Path Fill="{StaticResource Silver400Brush}"
@@ -112,10 +112,10 @@
                         </RadioButton.Content>
                     </RadioButton>
 
-                    <RadioButton x:Name="RadBtnAbout"
+                    <RadioButton x:Name="RadBtnHelp"
                                  GroupName="Menu"
                                  Margin="5,0,5,5"
-                                 ToolTip="Path of Hideout"
+                                 ToolTip="Help"
                                  Template="{StaticResource MenuRadioButton}">
                         <RadioButton.Content>
                             <Path Fill="{StaticResource Silver400Brush}"

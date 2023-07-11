@@ -39,7 +39,6 @@
                 </MultiTrigger.Setters>
             </MultiTrigger>
             
-
             <Trigger Property="IsChecked"
                      Value="True">
                 <Trigger.EnterActions>
