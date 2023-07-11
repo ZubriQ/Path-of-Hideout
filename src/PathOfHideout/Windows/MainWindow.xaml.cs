@@ -111,15 +111,5 @@ public partial class MainWindow : Window
         }
     }
 
-    private void BtnMinimize_Click(object sender, RoutedEventArgs e)
-    {
-        WindowState = WindowState.Minimized;
-    }
-
-    private void BtnClose_Click(object sender, RoutedEventArgs e)
-    {
-        Close();
-    }
-
     #endregion
 }
