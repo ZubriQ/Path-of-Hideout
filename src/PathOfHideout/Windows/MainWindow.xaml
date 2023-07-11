@@ -94,8 +94,7 @@
                                  Margin="5"
                                  ToolTip="Path of Hideout"
                                  Template="{StaticResource MenuRadioButton}"
-                                 IsChecked="True"
-                                 Foreground="AliceBlue">
+                                 IsChecked="True">
                         <RadioButton.Content>
                             <Path Fill="{StaticResource Silver400Brush}"
                                   Data="{StaticResource HomeButtonGeo}" />
