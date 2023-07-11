@@ -8,7 +8,7 @@
              d:DesignHeight="28"
              d:DesignWidth="260">
 
-    <DockPanel Height="28">
+    <DockPanel>
         <!-- Header -->
         <TextBlock Text="Path of Hideout"
                    VerticalAlignment="Center"

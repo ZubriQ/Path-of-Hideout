@@ -45,7 +45,8 @@
                     Background="{StaticResource Silver950Brush}"
                     CornerRadius="8,8,0,0"
                     MouseDown="BrdTitleBar_MouseDown">
-                <views:TitleBarView x:Name="ViewTitleBar"/>
+                <views:TitleBarView x:Name="ViewTitleBar"
+                                    Height="28"/>
             </Border>
 
             <!-- Menu -->
