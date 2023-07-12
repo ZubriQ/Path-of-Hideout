@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace PathOfHideout.MVVM.View
+namespace PathOfHideout.MVVM.View.General
 {
     /// <summary>
     /// Interaction logic for TitleBar.xaml

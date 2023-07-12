@@ -1,19 +1,21 @@
-﻿<Window x:Class="PathOfHideout.Windows.MainWindow"
+﻿<Window x:Class="PathOfHideout.MVVM.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PathOfHideout"
+        xmlns:generalViews="clr-namespace:PathOfHideout.MVVM.View.General"
         xmlns:views="clr-namespace:PathOfHideout.MVVM.View"
+        xmlns:viewmodel="clr-namespace:PathOfHideout.MVVM.ViewModel"
         mc:Ignorable="d"
         d:Height="390"
         d:Width="260"
         Title="Path of Hideout"
-        Height="390"
+        Height="395"
         Width="260"
-        MaxHeight="390"
+        MaxHeight="395"
         MaxWidth="800"
-        MinHeight="390"
+        MinHeight="395"
         MinWidth="260"
         AllowsTransparency="True"
         Background="Transparent"
@@ -45,7 +47,7 @@
                     Background="{StaticResource Silver950Brush}"
                     CornerRadius="8,8,0,0"
                     MouseDown="BrdTitleBar_MouseDown">
-                <views:TitleBarView x:Name="ViewTitleBar"
+                <generalViews:TitleBarView x:Name="ViewTitleBar"
                                     Height="28"/>
             </Border>
 
@@ -55,7 +57,7 @@
                     Background="{StaticResource Silver925Brush}"
                     CornerRadius="0,0,0,8"
                     Margin="1,0,0,1">
-                <views:MenuView x:Name="ViewMenu"/>
+                <generalViews:MenuView x:Name="ViewMenu"/>
             </Border>
 
             <!-- Application -->
@@ -64,8 +66,9 @@
                     Background="{StaticResource Silver900Brush}"
                     CornerRadius="0,0,8,0"
                     Margin="0,0,1,1">
-                <views:HomePageView x:Name="ViewHomePage"
-                                    Margin="5"/>
+                <ContentControl x:Name="MainContentControl"
+                                Content="{Binding Path=Navigation.CurrentView}"
+                                Margin="5"/>
             </Border>
         </Grid>
     </Border>

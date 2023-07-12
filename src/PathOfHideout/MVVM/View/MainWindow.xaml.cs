@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-namespace PathOfHideout.Windows;
+
+namespace PathOfHideout.MVVM.View;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

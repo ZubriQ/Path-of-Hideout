@@ -7,14 +7,14 @@ using System.Windows.Controls;
 namespace PathOfHideout.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for HomePageView.xaml
+    /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class HomePageView : UserControl
+    public partial class HomeView : UserControl
     {
         private readonly DecorationMover _mover = new();
         private readonly FileHandler _fileHandler = new();
 
-        public HomePageView()
+        public HomeView()
         {
             InitializeComponent();
             InitializeSettings();

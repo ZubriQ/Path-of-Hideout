@@ -1,6 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+
+    <Geometry x:Key="ResizeGripGeo">
+        M22,22H20V20H22V22M22,18H20V16H22V18M18,22H16V20H18V22M18,18H16V16H18V18M14,22H12V20H14V22M22,14H20V12H22V14Z
+    </Geometry>
+
     <Style TargetType="{x:Type Button}">
         <Setter Property="Background"
                 Value="{StaticResource PrimaryBrush}"/>
@@ -71,7 +75,7 @@
                     <Path Width="28"
                           Height="28"
                           Fill="{StaticResource Silver600Brush}"
-                          Data="M22,22H20V20H22V22M22,18H20V16H22V18M18,22H16V20H18V22M18,18H16V16H18V18M14,22H12V20H14V22M22,14H20V12H22V14Z"/>
+                          Data="{StaticResource ResizeGripGeo}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

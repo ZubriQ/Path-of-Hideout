@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="PathOfHideout.MVVM.View.MenuView"
+﻿<UserControl x:Class="PathOfHideout.MVVM.View.General.MenuView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:PathOfHideout.MVVM.View"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:PathOfHideout.MVVM.View.General"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="45">
 
@@ -25,6 +25,7 @@
                      Margin="5"
                      ToolTip="Path of Hideout"
                      Template="{StaticResource MenuRadioButton}"
+                     Command="{Binding Path=NavigateToHomeCommand}"
                      IsChecked="True">
             <RadioButton.Content>
                 <Path Fill="{StaticResource Silver400Brush}"
@@ -36,7 +37,8 @@
                      GroupName="Menu"
                      Margin="5,0,5,5"
                      ToolTip="Settings"
-                     Template="{StaticResource MenuRadioButton}">
+                     Template="{StaticResource MenuRadioButton}"
+                     Command="{Binding Path=NavigateToSettingsCommand}">
             <RadioButton.Content>
                 <Path Fill="{StaticResource Silver400Brush}"
                       Data="{StaticResource SettingsButtonGeo}" />
@@ -47,12 +49,12 @@
                      GroupName="Menu"
                      Margin="5,0,5,5"
                      ToolTip="Help"
-                     Template="{StaticResource MenuRadioButton}">
+                     Template="{StaticResource MenuRadioButton}"
+                     Command="{Binding Path=NavigateToHelpCommand}">
             <RadioButton.Content>
                 <Path Fill="{StaticResource Silver400Brush}"
                       Data="{StaticResource HelpButtonGeo}" />
             </RadioButton.Content>
         </RadioButton>
     </StackPanel>
-
 </UserControl>
