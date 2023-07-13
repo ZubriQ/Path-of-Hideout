@@ -5,38 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PathOfHideout"
         xmlns:generalViews="clr-namespace:PathOfHideout.MVVM.View.General"
-        xmlns:views="clr-namespace:PathOfHideout.MVVM.View"
-        xmlns:viewmodel="clr-namespace:PathOfHideout.MVVM.ViewModel"
         mc:Ignorable="d"
-        d:Height="390"
-        d:Width="260"
+        d:Height="385"
+        d:Width="330"
         Title="Path of Hideout"
-        Height="395"
-        Width="260"
-        MaxHeight="395"
-        MaxWidth="800"
-        MinHeight="395"
-        MinWidth="260"
+        Height="385"
+        Width="330"
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="NoResize">
 
     <!-- Window's gray highlight -->
     <Border CornerRadius="8">
         <Border.Background>
             <SolidColorBrush Color="{StaticResource Silver700}"
-                             Opacity="0.8"/>
+                             Opacity="0.8" />
         </Border.Background>
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto" />
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 

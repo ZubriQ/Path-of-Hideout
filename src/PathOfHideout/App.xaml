@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Resources/Templates/Buttons/Control/CloseButton.xaml" />
                 <ResourceDictionary Source="Resources/Templates/Buttons/Control/MinimizeButton.xaml" />
                 <ResourceDictionary Source="Resources/Templates/Buttons/General/DefaultButton.xaml" />
+                <ResourceDictionary Source="Resources/Templates/Buttons/General/ProceedButton.xaml" />
                 <ResourceDictionary Source="Resources/Templates/RadioButtons/MenuRadioButton.xaml" />
                 <!-- Views -->
                 <ResourceDictionary Source="Resources/Templates/ViewDataTemplates.xaml" />

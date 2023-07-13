@@ -31,7 +31,6 @@ namespace PathOfHideout.MVVM.View
         private void BtnFindFile_Click(object sender, RoutedEventArgs e)
         {
             (FileStatus status, var newFileName) = _fileHandler.SelectHideoutFile();
-            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
             UpdateSourceAndDestinationPaths(newFileName);
         }
 
@@ -47,7 +46,6 @@ namespace PathOfHideout.MVVM.View
         private void BtnSaveAs_Click(object sender, RoutedEventArgs e)
         {
             (FileStatus status, var newFileName) = _fileHandler.SelectDestinationPath();
-            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
             UpdateDestinationPath(newFileName);
         }
 
@@ -59,7 +57,7 @@ namespace PathOfHideout.MVVM.View
             }
         }
 
-        private void BtnMoveDecorations_Click(object sender, RoutedEventArgs e)
+        private void BtnProceedDecorations_Click(object sender, RoutedEventArgs e)
         {
             string sourceFilePath = TxtHideoutSourceFilePath.Text;
             int xCoordinate = int.Parse(TxtXCoordinate.Text);
@@ -67,12 +65,11 @@ namespace PathOfHideout.MVVM.View
             string destinationPath = TxtHideoutDestinationPath.Text;
 
             var response = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
-            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(response);
         }
 
         private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
         {
-            BtnMoveDecorations.IsEnabled = ValidateMoveDecorationsInput();
+            BtnProceedDecorations.IsEnabled = ValidateMoveDecorationsInput();
         }
 
         private bool ValidateMoveDecorationsInput()

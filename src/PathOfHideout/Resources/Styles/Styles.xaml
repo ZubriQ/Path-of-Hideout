@@ -96,4 +96,26 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="Paragraph"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment"
+                Value="Left" />
+        <Setter Property="TextWrapping"
+                Value="Wrap" />
+        <Setter Property="Margin"
+                Value="10,5,10,5" />
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource Silver200Brush}" />
+    </Style>
+
+    <Style x:Key="About"
+           TargetType="TextBlock">
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="Foreground"
+                Value="{StaticResource Silver300Brush}" />
+    </Style>
 </ResourceDictionary>

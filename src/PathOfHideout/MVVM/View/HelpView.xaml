@@ -7,6 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Help" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="To adjust the positions of decorations in your hideout file, you will need to:" />
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  1. Export your .hideout file."/>
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  2. Select the exported .hideout file via the 'Find file' button." />
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  3. Optionally, modify the 'Save to' path." />
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  4. Enter the X and Y coordinates for each decoration change (hideouts are 400x400)." />
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  5. Hit 'Proceed'." />
+            <TextBlock Style="{StaticResource Paragraph}"
+                       Text="  6. Import the updated file back into the game." />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    Margin="5,0,5,5">
+            <TextBlock Style="{StaticResource About}" Text="Path of Hideout v1.0.0"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Style="{StaticResource About}"
+                       Text="by ZubriQ and Andrew The Great" />
+        </StackPanel>
     </Grid>
 </UserControl>

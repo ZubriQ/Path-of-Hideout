@@ -4,10 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PathOfHideout.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel>
-        <TextBlock Text="Settings"/>
-        <TextBox Text="{Binding TestText}"/>
-    </StackPanel>
+             mc:Ignorable="d"
+             d:Height="390"
+             d:Width="260"
+             Height="390"
+             Width="390">
+    <Grid>
+        <TextBlock Text="Settings"
+                   HorizontalAlignment="Left"
+                   Margin="10,5,10,5" />
+    </Grid>
 </UserControl>

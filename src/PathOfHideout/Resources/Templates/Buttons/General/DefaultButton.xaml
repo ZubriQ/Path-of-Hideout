@@ -3,12 +3,14 @@
     <ControlTemplate TargetType="Button"
                      x:Key="DefaultButton">
         <Border x:Name="BtnDefault"
-                Background="{StaticResource PrimaryBrush}"
-                BorderThickness="0"
+                Background="Transparent"
                 CornerRadius="8"
                 Height="32"
+                Width="100"
                 Padding="8,0,8,0"
-                Cursor="Hand">
+                Cursor="Hand"
+                BorderBrush="{StaticResource PrimaryBrush}"
+                BorderThickness="1.5">
             <ContentControl Margin="{TemplateBinding Padding}"
                             Content="{TemplateBinding Content}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -18,47 +20,7 @@
                             FontSize="16"
                             FontWeight="SemiBold"
                             VerticalContentAlignment="Center"
-                            Focusable="False"/>
+                            Focusable="False" />
         </Border>
-
-        <ControlTemplate.Triggers>
-            <Trigger Property="IsMouseOver"
-                     Value="True">
-                <Setter TargetName="BtnDefault"
-                        Property="Background"
-                        Value="{StaticResource PrimaryDarkBrush1}"/>
-            </Trigger>
-
-            <Trigger Property="IsPressed"
-                     Value="True">
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetName="BtnDefault"
-                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                            To="{StaticResource PrimaryDark2}"
-                                            Duration="0:0:0.15"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetName="BtnDefault"
-                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                            To="{StaticResource PrimaryDark1}"
-                                            Duration="0:0:0.1"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
-            </Trigger>
-
-            <Trigger Property="IsEnabled"
-                     Value="false">
-                <Setter TargetName="BtnDefault"
-                        Property="Background"
-                        Value="{StaticResource Silver600Brush}"/>
-            </Trigger>
-        </ControlTemplate.Triggers>
     </ControlTemplate>
 </ResourceDictionary>

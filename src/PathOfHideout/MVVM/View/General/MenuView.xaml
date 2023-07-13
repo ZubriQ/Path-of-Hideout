@@ -38,7 +38,8 @@
                      Margin="5,0,5,5"
                      ToolTip="Settings"
                      Template="{StaticResource MenuRadioButton}"
-                     Command="{Binding Path=NavigateToSettingsCommand}">
+                     Command="{Binding Path=NavigateToSettingsCommand}"
+                     Visibility="Collapsed">
             <RadioButton.Content>
                 <Path Fill="{StaticResource Silver400Brush}"
                       Data="{StaticResource SettingsButtonGeo}" />
