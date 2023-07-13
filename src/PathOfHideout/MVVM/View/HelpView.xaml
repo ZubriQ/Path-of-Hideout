@@ -15,18 +15,43 @@
         <StackPanel Grid.Row="0">
             <TextBlock Style="{StaticResource Paragraph}"
                        Text="To adjust the positions of decorations in your hideout file, you will need to:" />
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  1. Export your .hideout file."/>
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  2. Select the exported .hideout file via the 'Find file' button." />
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  3. Optionally, modify the 'Save to' path." />
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  4. Enter the X and Y coordinates for each decoration change (hideouts are 400x400)." />
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  5. Hit 'Proceed'." />
-            <TextBlock Style="{StaticResource Paragraph}"
-                       Text="  6. Import the updated file back into the game." />
+            
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  1. " />
+                <Run Text="Export your .hideout file." />
+            </TextBlock>
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  2. " />
+                <Run Text="Select the exported .hideout file via the 'Find file' button." />
+            </TextBlock>
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  3. " />
+                <Run Text="Optionally, modify the 'Save to' path." />
+            </TextBlock>
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  4. " />
+                <Run Text="Enter the X and Y coordinates for each decoration change (hideouts are 400x400)." />
+            </TextBlock>
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  5. " />
+                <Run Text="Hit 'Proceed'." />
+            </TextBlock>
+            <TextBlock Style="{StaticResource Paragraph}">
+                <Run Foreground="{StaticResource PrimaryLightBrush2}"
+                     FontWeight="SemiBold"
+                     Text="  6. " />
+                <Run Text="Import the updated file back into the game." />
+            </TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1"
