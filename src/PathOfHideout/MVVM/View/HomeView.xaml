@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:PathOfHideout.MVVM.View"
+             xmlns:viewmodel="clr-namespace:PathOfHideout.MVVM.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:HomeViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="340"
              d:DesignWidth="220">
@@ -72,8 +74,9 @@
                          MaxLength="4"
                          Margin="5"
                          TextChanged="MoveDecorationsValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move"
-                         Text="{Binding XValue}" />
+                         ToolTip="The amount by which all decorations move, for example 15"
+                         Text="{Binding XValue}"
+                         d:Text="15" />
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -83,8 +86,9 @@
                          MaxLength="4"
                          Margin="5"
                          TextChanged="MoveDecorationsValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move"
-                         Text="{Binding YValue}" />
+                         ToolTip="The amount by which all decorations move, for example -15"
+                         Text="{Binding YValue}"
+                         d:Text="-15" />
             </StackPanel>
         </Grid>
 

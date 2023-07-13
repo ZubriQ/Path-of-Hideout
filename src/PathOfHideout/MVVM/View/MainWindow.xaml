@@ -46,7 +46,7 @@
             </Border>
 
             <!-- Menu -->
-            <Border Grid.Row="1" 
+            <Border Grid.Row="1"
                     Grid.Column="0"
                     Background="{StaticResource Silver925Brush}"
                     CornerRadius="0,0,0,8"
