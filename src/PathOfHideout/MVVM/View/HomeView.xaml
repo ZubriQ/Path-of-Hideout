@@ -25,7 +25,8 @@
                      MaxLength="256"
                      Margin="5"
                      TextChanged="MoveDecorationsValidation_TextChanged"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}" />
+                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                     Text="{Binding SourcePath}" />
             <Button x:Name="BtnFindFile"
                     Content="Choose file"
                     Margin="5"
@@ -44,7 +45,8 @@
                      MaxLength="256"
                      Margin="5"
                      TextChanged="MoveDecorationsValidation_TextChanged"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}" />
+                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                     Text="{Binding DestinationPath}" />
             <Button x:Name="BtnSaveAs"
                     Content="Save as"
                     Margin="5"
@@ -70,7 +72,8 @@
                          MaxLength="4"
                          Margin="5"
                          TextChanged="MoveDecorationsValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move" />
+                         ToolTip="The amount by which all decorations move"
+                         Text="{Binding XValue}" />
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -80,7 +83,8 @@
                          MaxLength="4"
                          Margin="5"
                          TextChanged="MoveDecorationsValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move" />
+                         ToolTip="The amount by which all decorations move"
+                         Text="{Binding YValue}" />
             </StackPanel>
         </Grid>
 

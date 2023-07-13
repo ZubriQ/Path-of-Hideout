@@ -17,15 +17,6 @@ namespace PathOfHideout.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            InitializeSettings();
-        }
-
-        private void InitializeSettings()
-        {
-            TxtHideoutSourceFilePath.Text = @"F:\hideout.hideout";
-            TxtHideoutDestinationPath.Text = @"F:\hideout.hideout";
-            TxtXCoordinate.Text = "10";
-            TxtYCoordinate.Text = "-10";
         }
 
         private void BtnFindFile_Click(object sender, RoutedEventArgs e)
