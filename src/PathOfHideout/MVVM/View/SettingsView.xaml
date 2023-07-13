@@ -5,10 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PathOfHideout.MVVM.View"
              mc:Ignorable="d"
-             d:Height="390"
-             d:Width="260"
-             Height="390"
-             Width="390">
+             d:Height="340"
+             d:Width="290">
     <Grid>
         <TextBlock Text="Settings"
                    HorizontalAlignment="Left"
