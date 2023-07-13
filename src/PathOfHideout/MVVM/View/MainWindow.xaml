@@ -42,7 +42,7 @@
                     CornerRadius="8,8,0,0"
                     MouseDown="BrdTitleBar_MouseDown">
                 <generalViews:TitleBarView x:Name="ViewTitleBar"
-                                    Height="28"/>
+                                           Height="28"/>
             </Border>
 
             <!-- Menu -->
