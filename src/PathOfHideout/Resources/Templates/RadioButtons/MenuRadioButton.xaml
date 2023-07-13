@@ -12,7 +12,8 @@
             <ContentControl Content="{TemplateBinding Content}"
                             Width="24"
                             Height="24"
-                            Margin="4">
+                            Margin="4"
+                            Focusable="False">
                 <ContentControl.ContentTemplate>
                     <DataTemplate>
                         <Path Fill="{Binding Path=Fill}"

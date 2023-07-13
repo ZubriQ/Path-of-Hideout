@@ -98,7 +98,7 @@
     </Style>
 
     <Style x:Key="Paragraph"
-           TargetType="TextBlock">
+           TargetType="{x:Type TextBlock}">
         <Setter Property="HorizontalAlignment"
                 Value="Left" />
         <Setter Property="TextWrapping"
@@ -112,10 +112,15 @@
     </Style>
 
     <Style x:Key="About"
-           TargetType="TextBlock">
+           TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize"
                 Value="14" />
         <Setter Property="Foreground"
                 Value="{StaticResource Silver300Brush}" />
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}">
+        <Setter Property="Focusable"
+                Value="False" />
     </Style>
 </ResourceDictionary>
