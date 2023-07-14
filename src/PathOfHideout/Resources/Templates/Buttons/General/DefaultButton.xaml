@@ -15,9 +15,9 @@
                             Content="{TemplateBinding Content}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            Foreground="{TemplateBinding Foreground}"
+                            Foreground="{StaticResource Silver050Brush}"
                             FontFamily="Inter"
-                            FontSize="16"
+                            FontSize="14"
                             FontWeight="SemiBold"
                             VerticalContentAlignment="Center"
                             Focusable="False" />

@@ -14,10 +14,10 @@
                             Content="{TemplateBinding Content}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            Foreground="{TemplateBinding Foreground}"
+                            Foreground="White"
                             FontFamily="Inter"
-                            FontSize="16"
-                            FontWeight="SemiBold"
+                            FontSize="14"
+                            FontWeight="Normal"
                             VerticalContentAlignment="Center"
                             Focusable="False" />
         </Border>

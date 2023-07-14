@@ -22,7 +22,8 @@
         <StackPanel Grid.Row="0"
                     Margin="5">
             <TextBlock Text="Hideout file path:"
-                       Margin="5,0,5,0" />
+                       Margin="5,0,5,0"
+                       Style="{StaticResource TextBoxTitle}" />
             <TextBox x:Name="TxtHideoutSourceFilePath"
                      MaxLength="256"
                      Margin="5"
@@ -42,7 +43,8 @@
         <StackPanel Grid.Row="1"
                     Margin="5,0,5,5">
             <TextBlock Text="Save to:"
-                       Margin="5,5,5,0" />
+                       Margin="5,5,5,0"
+                       Style="{StaticResource TextBoxTitle}" />
             <TextBox x:Name="TxtHideoutDestinationPath"
                      MaxLength="256"
                      Margin="5"
@@ -69,7 +71,8 @@
             
             <StackPanel Grid.Column="0">
                 <TextBlock Text="X:"
-                           Margin="5,5,5,0" />
+                           Margin="5,5,5,0"
+                           Style="{StaticResource TextBoxTitle}" />
                 <TextBox x:Name="TxtXCoordinate"
                          MaxLength="4"
                          Margin="5"
@@ -81,7 +84,8 @@
 
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Y:"
-                           Margin="5,5,5,0" />
+                           Margin="5,5,5,0"
+                           Style="{StaticResource TextBoxTitle}" />
                 <TextBox x:Name="TxtYCoordinate"
                          MaxLength="4"
                          Margin="5"
