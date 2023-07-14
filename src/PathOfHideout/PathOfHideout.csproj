@@ -5,6 +5,8 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishSingleFile>true</PublishSingleFile>
     <ApplicationIcon>Resources\AppIcon\icon.ico</ApplicationIcon>
     <!--<RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
   </PropertyGroup>

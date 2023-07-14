@@ -117,6 +117,8 @@
                 Value="Left" />
         <Setter Property="TextWrapping"
                 Value="Wrap" />
+        <Setter Property="TextAlignment"
+                Value="Justify" />
         <Setter Property="Margin"
                 Value="10,5,10,5" />
         <Setter Property="FontSize"
