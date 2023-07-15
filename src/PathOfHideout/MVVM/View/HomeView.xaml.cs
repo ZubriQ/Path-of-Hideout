@@ -58,12 +58,12 @@ namespace PathOfHideout.MVVM.View
             var response = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
         }
 
-        private void MoveDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
+        private void ProceedDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
         {
-            BtnProceedDecorations.IsEnabled = ValidateMoveDecorationsInput();
+            BtnProceedDecorations.IsEnabled = ValidateProceedDecorationsInput();
         }
 
-        private bool ValidateMoveDecorationsInput()
+        private bool ValidateProceedDecorationsInput()
         {
             string xCoordinate = TxtXCoordinate.Text;
             string yCoordinate = TxtYCoordinate.Text;

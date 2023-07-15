@@ -27,9 +27,9 @@
             <TextBox x:Name="TxtHideoutSourceFilePath"
                      MaxLength="256"
                      Margin="5"
-                     TextChanged="MoveDecorationsValidation_TextChanged"
+                     TextChanged="ProceedDecorationsValidation_TextChanged"
                      ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
-                     Text="{Binding SourcePath}" />
+                     Text="{Binding SourcePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Button x:Name="BtnFindFile"
                     Content="Choose file"
                     Margin="5"
@@ -48,9 +48,9 @@
             <TextBox x:Name="TxtHideoutDestinationPath"
                      MaxLength="256"
                      Margin="5"
-                     TextChanged="MoveDecorationsValidation_TextChanged"
+                     TextChanged="ProceedDecorationsValidation_TextChanged"
                      ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
-                     Text="{Binding DestinationPath}" />
+                     Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Button x:Name="BtnSaveAs"
                     Content="Save as"
                     Margin="5"
@@ -76,9 +76,9 @@
                 <TextBox x:Name="TxtXCoordinate"
                          MaxLength="4"
                          Margin="5"
-                         TextChanged="MoveDecorationsValidation_TextChanged"
+                         TextChanged="ProceedDecorationsValidation_TextChanged"
                          ToolTip="The amount by which all decorations move, for example 15"
-                         Text="{Binding XValue}"
+                         Text="{Binding XValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          d:Text="15" />
             </StackPanel>
 
@@ -89,9 +89,9 @@
                 <TextBox x:Name="TxtYCoordinate"
                          MaxLength="4"
                          Margin="5"
-                         TextChanged="MoveDecorationsValidation_TextChanged"
+                         TextChanged="ProceedDecorationsValidation_TextChanged"
                          ToolTip="The amount by which all decorations move, for example -15"
-                         Text="{Binding YValue}"
+                         Text="{Binding YValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          d:Text="-15" />
             </StackPanel>
         </Grid>
