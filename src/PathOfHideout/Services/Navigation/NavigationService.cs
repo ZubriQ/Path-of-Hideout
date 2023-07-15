@@ -1,13 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using PathOfHideout.Core;
-using PathOfHideout.MVVM.ViewModel;
+﻿using PathOfHideout.Core;
 using System;
 
 namespace PathOfHideout.Services.Navigation;
 
 public class NavigationService : ObservableObject, INavigationService
 {
-    public readonly Func<Type, ViewModel> _viewModelFactory;
+    private readonly Func<Type, ViewModel> _viewModelFactory;
     private ViewModel _currentView;
 
     public ViewModel CurrentView
