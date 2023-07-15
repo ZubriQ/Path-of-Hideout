@@ -7,6 +7,7 @@
     <UseWPF>true</UseWPF>
     <PublishReadyToRun>true</PublishReadyToRun>
     <PublishSingleFile>true</PublishSingleFile>
+    <AssemblyName>Path of Hideout</AssemblyName>
     <ApplicationIcon>Resources\AppIcon\icon.ico</ApplicationIcon>
     <!--<RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
   </PropertyGroup>
