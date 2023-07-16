@@ -51,7 +51,8 @@
                      Margin="5"
                      TextChanged="ProceedDecorationsValidation_TextChanged"
                      ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
-                     Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                     Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     IsEnabled="False" />
             <Button x:Name="BtnSaveAs"
                     Content="Save as"
                     Margin="5"
@@ -59,7 +60,8 @@
                     Template="{StaticResource DefaultButton}"
                     ToolTip="Change hideout file save location"
                     Click="BtnSaveAs_Click" 
-                    Background="Transparent" />
+                    Background="Transparent" 
+                    IsEnabled="False" />
         </StackPanel>
 
         <!-- X, Y -->

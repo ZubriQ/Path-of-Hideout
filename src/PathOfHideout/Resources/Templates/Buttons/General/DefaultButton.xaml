@@ -22,5 +22,14 @@
                             VerticalContentAlignment="Center"
                             Focusable="False" />
         </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled"
+                     Value="false">
+                <Setter TargetName="BtnDefault"
+                        Property="BorderBrush"
+                        Value="{StaticResource Silver600Brush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 </ResourceDictionary>

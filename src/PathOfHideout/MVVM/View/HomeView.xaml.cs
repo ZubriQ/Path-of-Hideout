@@ -63,11 +63,6 @@ namespace PathOfHideout.MVVM.View
 
         private void ProceedDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
         {
-            BtnProceedDecorations.IsEnabled = ValidateProceedDecorationsInput();
-        }
-
-        private bool ValidateProceedDecorationsInput()
-        {
             string xCoordinate = TxtXCoordinate.Text;
             string yCoordinate = TxtYCoordinate.Text;
             string sourceFilePath = TxtHideoutSourceFilePath.Text;
@@ -77,7 +72,9 @@ namespace PathOfHideout.MVVM.View
             bool isSourceFilePathValid = FilePathValidator.IsValid(sourceFilePath);
             bool isDestinationPathValid = FilePathValidator.IsValid(destinationPath);
 
-            return isXyCoordinateValid && isSourceFilePathValid && isDestinationPathValid;
+            BtnProceedDecorations.IsEnabled = isXyCoordinateValid && isSourceFilePathValid && isDestinationPathValid;
+            TxtHideoutDestinationPath.IsEnabled = isSourceFilePathValid;
+            BtnSaveAs.IsEnabled = isSourceFilePathValid;
         }
     }
 }

@@ -53,12 +53,24 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
-                    <Border Background="{TemplateBinding Background}"
+                    <Border x:Name="TextBoxBorder"
+                            Background="{TemplateBinding Background}"
                             BorderBrush="{StaticResource Silver800Brush}"
                             BorderThickness="0"
                             CornerRadius="8">
                         <ScrollViewer x:Name="PART_ContentHost" />
                     </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter TargetName="TextBoxBorder"
+                                    Property="Background"
+                                    Value="{StaticResource Silver700Brush}" />
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource Silver400Brush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
