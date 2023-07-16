@@ -16,7 +16,7 @@
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             Foreground="{StaticResource Silver050Brush}"
-                            FontFamily="Inter"
+                            FontFamily="/Resources/Fonts/#Inter"
                             FontSize="14"
                             FontWeight="SemiBold"
                             VerticalContentAlignment="Center"

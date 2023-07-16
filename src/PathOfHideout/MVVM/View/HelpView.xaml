@@ -15,7 +15,8 @@
 
         <StackPanel Grid.Row="0">
             <TextBlock Style="{StaticResource Paragraph}"
-                       Text="To adjust the positions of decorations in your hideout file, you will need to:" />
+                       Text="To adjust the positions of decorations in your hideout file, you will need to:"
+                       FontFamily="/Resources/Fonts/#Roboto" />
             
             <TextBlock Style="{StaticResource Paragraph}">
                 <Run Foreground="{StaticResource PrimaryLightBrush2}"

@@ -111,6 +111,16 @@
                 Value="False" />
     </Style>
 
+    <Style x:Key="TextBoxTitle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize"
+                Value="14" />
+        <Setter Property="FontFamily"
+                Value="/Resources/Fonts/#Roboto" />
+        <Setter Property="Foreground"
+                Value="{StaticResource Silver200Brush}" />
+    </Style>
+
     <Style x:Key="Paragraph"
            TargetType="{x:Type TextBlock}">
         <Setter Property="HorizontalAlignment"
@@ -121,14 +131,8 @@
                 Value="Justify" />
         <Setter Property="Margin"
                 Value="10,5,10,5" />
-        <Setter Property="FontSize"
-                Value="14" />
-        <Setter Property="Foreground"
-                Value="{StaticResource Silver200Brush}" />
-    </Style>
-
-    <Style x:Key="TextBoxTitle"
-           TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily"
+                Value="Calibri" />
         <Setter Property="FontSize"
                 Value="14" />
         <Setter Property="Foreground"
@@ -139,6 +143,8 @@
            TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize"
                 Value="14" />
+        <Setter Property="FontFamily"
+                Value="Calibri" />
         <Setter Property="Foreground"
                 Value="{StaticResource Silver300Brush}" />
     </Style>

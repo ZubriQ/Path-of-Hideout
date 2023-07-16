@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <None Remove="Resources\AppIcon\icon.ico" />
+    <None Remove="Resources\Fonts\Inter-Regular.ttf" />
+    <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,13 +26,14 @@
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
     <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\AppIcon\icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Fonts\Inter-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Roboto-Regular.ttf" />
   </ItemGroup>
 
 </Project>

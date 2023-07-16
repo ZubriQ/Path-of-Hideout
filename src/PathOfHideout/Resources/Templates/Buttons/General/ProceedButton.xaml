@@ -15,7 +15,7 @@
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             Foreground="White"
-                            FontFamily="Inter"
+                            FontFamily="/Resources/Fonts/#Inter"
                             FontSize="14"
                             FontWeight="Normal"
                             VerticalContentAlignment="Center"
