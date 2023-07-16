@@ -58,12 +58,13 @@
 
         <StackPanel Grid.Row="1"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
                     Margin="5,0,5,5">
-            <TextBlock Style="{StaticResource About}" Text="Path of Hideout v1.0.0"
+            <TextBlock Style="{StaticResource About}" 
+                       Text="Path of Hideout v1.0.0"
                        HorizontalAlignment="Center"/>
             <TextBlock Style="{StaticResource About}"
-                       Text="by ZubriQ and Andrew The Great" />
+                       Text="by ZubriQ and Andrew The Great"
+                       HorizontalAlignment="Center" />
         </StackPanel>
     </Grid>
 </UserControl>

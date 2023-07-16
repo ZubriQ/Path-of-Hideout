@@ -68,11 +68,11 @@ namespace PathOfHideout.MVVM.View
             string sourceFilePath = TxtHideoutSourceFilePath.Text;
             string destinationPath = TxtHideoutDestinationFilePath.Text;
 
-            bool isXyCoordinateValid = XyCoordinateValidator.IsValid(xCoordinate, yCoordinate);
+            bool isXyCoordinatesValid = XyCoordinateValidator.IsValid(xCoordinate, yCoordinate);
             bool isSourceFilePathValid = FilePathValidator.IsValid(sourceFilePath);
             bool isDestinationPathValid = FilePathValidator.IsValid(destinationPath);
 
-            BtnProceedDecorations.IsEnabled = isXyCoordinateValid && isSourceFilePathValid && isDestinationPathValid;
+            BtnProceedDecorations.IsEnabled = isXyCoordinatesValid && isSourceFilePathValid && isDestinationPathValid;
             TxtHideoutDestinationFilePath.IsEnabled = isSourceFilePathValid;
             BtnSaveAs.IsEnabled = isSourceFilePathValid;
         }

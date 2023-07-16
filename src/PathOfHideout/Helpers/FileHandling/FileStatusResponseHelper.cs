@@ -1,4 +1,5 @@
 ﻿using PathOfHideout.HideoutMover.Utilities;
+using System;
 
 namespace PathOfHideout.Helpers;
 
@@ -8,7 +9,7 @@ internal static class FileStatusResponseHelper
     {
         return status switch
         {
-            HideoutMoveStatus.Success => "decorations moved",
+            HideoutMoveStatus.Success => "decorations moved (" + DateTime.Now.ToString("HH:mm:ss:fff") + ")",
             HideoutMoveStatus.Fail => "decorations were not moved",
             HideoutMoveStatus.FileNotFound => "hideout file not found",
             HideoutMoveStatus.FileParseFailed => "could not load hideout file",
