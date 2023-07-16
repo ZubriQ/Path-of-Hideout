@@ -39,6 +39,8 @@
                 Value="Center" />
         <Setter Property="Height"
                 Value="30" />
+        <Setter Property="FontFamily"
+                Value="Calibri" />
         <Setter Property="FontSize"
                 Value="14" />
         <Setter Property="Padding"

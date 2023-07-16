@@ -23,6 +23,7 @@ namespace PathOfHideout.MVVM.View
         {
             (FileStatus status, var newFileName) = _fileHandler.SelectHideoutFile();
             UpdateSourceAndDestinationPaths(newFileName);
+            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
         }
 
         private void UpdateSourceAndDestinationPaths(string path)
@@ -38,6 +39,7 @@ namespace PathOfHideout.MVVM.View
         {
             (FileStatus status, var newFileName) = _fileHandler.SelectDestinationPath();
             UpdateDestinationPath(newFileName);
+            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
         }
 
         private void UpdateDestinationPath(string path)
@@ -55,7 +57,8 @@ namespace PathOfHideout.MVVM.View
             int yCoordinate = int.Parse(TxtYCoordinate.Text);
             string destinationPath = TxtHideoutDestinationPath.Text;
 
-            var response = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
+            var status = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
+            TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
         }
 
         private void ProceedDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
