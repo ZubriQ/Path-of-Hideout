@@ -115,7 +115,7 @@
                     Margin="10,5,5,0">
             <TextBlock x:Name="TxtStatus"
                        HorizontalAlignment="Left"
-                       Foreground="{StaticResource Silver300Brush}" />
+                       Foreground="{StaticResource Silver500Brush}" />
         </StackPanel>
     </Grid>
 </UserControl>

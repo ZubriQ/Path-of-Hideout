@@ -148,6 +148,6 @@
         <Setter Property="FontFamily"
                 Value="Calibri" />
         <Setter Property="Foreground"
-                Value="{StaticResource Silver300Brush}" />
+                Value="{StaticResource Silver500Brush}" />
     </Style>
 </ResourceDictionary>
