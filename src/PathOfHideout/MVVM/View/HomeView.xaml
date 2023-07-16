@@ -8,7 +8,7 @@
              d:DataContext="{d:DesignInstance Type=viewmodel:HomeViewModel}"
              mc:Ignorable="d"
              d:DesignHeight="360"
-             d:DesignWidth="220">
+             d:DesignWidth="280">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -25,12 +25,18 @@
             <TextBlock Text="Hideout file path:"
                        Margin="5,0,5,0"
                        Style="{StaticResource TextBoxTitle}" />
-            <TextBox x:Name="TxtHideoutSourceFilePath"
-                     MaxLength="256"
-                     Margin="5"
-                     TextChanged="InputValidation_TextChanged"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
-                     Text="{Binding SourcePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Grid>
+                <TextBox x:Name="TxtHideoutSourceFilePath"
+                         MaxLength="256"
+                         Margin="5"
+                         TextChanged="InputValidation_TextChanged"
+                         ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                         Text="{Binding SourcePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock x:Name="TxtHideoutSourceFilePathPlaceholder"
+                           Style="{StaticResource Placeholder}"
+                           Text="{Binding SourcePathPlaceholder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                           d:Text="exported .hideout file path" />
+            </Grid>
             <Button x:Name="BtnFindFile"
                     Content="Choose file"
                     Margin="5"
@@ -46,13 +52,20 @@
             <TextBlock Text="Save to:"
                        Margin="5,5,5,0"
                        Style="{StaticResource TextBoxTitle}" />
-            <TextBox x:Name="TxtHideoutDestinationPath"
-                     MaxLength="256"
-                     Margin="5"
-                     TextChanged="InputValidation_TextChanged"
-                     ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
-                     Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     IsEnabled="False" />
+            <Grid>
+                <TextBox x:Name="TxtHideoutDestinationFilePath"
+                         MaxLength="256"
+                         Margin="5"
+                         TextChanged="InputValidation_TextChanged"
+                         ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                         Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="False" />
+                <TextBlock x:Name="TxtHideoutDestinationFilePathPlaceholder"
+                           Style="{StaticResource Placeholder}"
+                           Text="{Binding DestinationPathPlaceholder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                           d:Text="save destination" />
+            </Grid>
+            
             <Button x:Name="BtnSaveAs"
                     Content="Save as"
                     Margin="5"
@@ -76,26 +89,36 @@
                 <TextBlock Text="X:"
                            Margin="5,5,5,0"
                            Style="{StaticResource TextBoxTitle}" />
-                <TextBox x:Name="TxtXCoordinate"
-                         MaxLength="4"
-                         Margin="5"
-                         TextChanged="InputValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move, for example 15"
-                         Text="{Binding XValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         d:Text="15" />
+                <Grid>
+                    <TextBox x:Name="TxtXCoordinate"
+                             MaxLength="4"
+                             Margin="5"
+                             TextChanged="InputValidation_TextChanged"
+                             ToolTip="The amount by which all decorations move, for example 15"
+                             Text="{Binding XValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock x:Name="TxtXCoordinatePlaceholder"
+                               Style="{StaticResource Placeholder}"
+                               Text="{Binding XValuePlaceholder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               d:Text="for example, 15" />
+                </Grid>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
                 <TextBlock Text="Y:"
                            Margin="5,5,5,0"
                            Style="{StaticResource TextBoxTitle}" />
-                <TextBox x:Name="TxtYCoordinate"
-                         MaxLength="4"
-                         Margin="5"
-                         TextChanged="InputValidation_TextChanged"
-                         ToolTip="The amount by which all decorations move, for example -15"
-                         Text="{Binding YValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         d:Text="-15" />
+                <Grid>
+                    <TextBox x:Name="TxtYCoordinate"
+                             MaxLength="4"
+                             Margin="5"
+                             TextChanged="InputValidation_TextChanged"
+                             ToolTip="The amount by which all decorations move, for example -15"
+                             Text="{Binding YValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock x:Name="TxtYCoordinatePlaceholder"
+                               Style="{StaticResource Placeholder}"
+                               Text="{Binding YValuePlaceholder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               d:Text="for example, -15" />
+                </Grid>
             </StackPanel>
         </Grid>
 

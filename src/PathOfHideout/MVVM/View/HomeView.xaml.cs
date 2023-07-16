@@ -31,7 +31,7 @@ namespace PathOfHideout.MVVM.View
             if (!string.IsNullOrEmpty(path))
             {
                 TxtHideoutSourceFilePath.Text = path;
-                TxtHideoutDestinationPath.Text = path;
+                TxtHideoutDestinationFilePath.Text = path;
             }
         }
 
@@ -46,7 +46,7 @@ namespace PathOfHideout.MVVM.View
         {
             if (!string.IsNullOrEmpty(path))
             {
-                TxtHideoutDestinationPath.Text = path;
+                TxtHideoutDestinationFilePath.Text = path;
             }
         }
 
@@ -55,7 +55,7 @@ namespace PathOfHideout.MVVM.View
             string sourceFilePath = TxtHideoutSourceFilePath.Text;
             int xCoordinate = int.Parse(TxtXCoordinate.Text);
             int yCoordinate = int.Parse(TxtYCoordinate.Text);
-            string destinationPath = TxtHideoutDestinationPath.Text;
+            string destinationPath = TxtHideoutDestinationFilePath.Text;
 
             var status = _mover.MoveDecorations(sourceFilePath, xCoordinate, yCoordinate, destinationPath);
             TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
@@ -66,14 +66,14 @@ namespace PathOfHideout.MVVM.View
             string xCoordinate = TxtXCoordinate.Text;
             string yCoordinate = TxtYCoordinate.Text;
             string sourceFilePath = TxtHideoutSourceFilePath.Text;
-            string destinationPath = TxtHideoutDestinationPath.Text;
+            string destinationPath = TxtHideoutDestinationFilePath.Text;
 
             bool isXyCoordinateValid = XyCoordinateValidator.IsValid(xCoordinate, yCoordinate);
             bool isSourceFilePathValid = FilePathValidator.IsValid(sourceFilePath);
             bool isDestinationPathValid = FilePathValidator.IsValid(destinationPath);
 
             BtnProceedDecorations.IsEnabled = isXyCoordinateValid && isSourceFilePathValid && isDestinationPathValid;
-            TxtHideoutDestinationPath.IsEnabled = isSourceFilePathValid;
+            TxtHideoutDestinationFilePath.IsEnabled = isSourceFilePathValid;
             BtnSaveAs.IsEnabled = isSourceFilePathValid;
         }
     }
