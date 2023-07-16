@@ -117,7 +117,8 @@
                     Margin="10,5,5,0">
             <TextBlock x:Name="TxtStatus"
                        HorizontalAlignment="Left"
-                       Foreground="{StaticResource Silver500Brush}" />
+                       Foreground="{StaticResource Silver500Brush}"
+                       Text="{Binding StatusText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
     </Grid>
 </UserControl>
