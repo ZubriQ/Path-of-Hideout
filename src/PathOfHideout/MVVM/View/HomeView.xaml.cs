@@ -61,7 +61,7 @@ namespace PathOfHideout.MVVM.View
             TxtStatus.Text = FileStatusResponseHelper.GetStatusMessage(status);
         }
 
-        private void ProceedDecorationsValidation_TextChanged(object sender, TextChangedEventArgs e)
+        private void InputValidation_TextChanged(object sender, TextChangedEventArgs e)
         {
             string xCoordinate = TxtXCoordinate.Text;
             string yCoordinate = TxtYCoordinate.Text;

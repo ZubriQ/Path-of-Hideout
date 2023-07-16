@@ -28,7 +28,7 @@
             <TextBox x:Name="TxtHideoutSourceFilePath"
                      MaxLength="256"
                      Margin="5"
-                     TextChanged="ProceedDecorationsValidation_TextChanged"
+                     TextChanged="InputValidation_TextChanged"
                      ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
                      Text="{Binding SourcePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Button x:Name="BtnFindFile"
@@ -49,7 +49,7 @@
             <TextBox x:Name="TxtHideoutDestinationPath"
                      MaxLength="256"
                      Margin="5"
-                     TextChanged="ProceedDecorationsValidation_TextChanged"
+                     TextChanged="InputValidation_TextChanged"
                      ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
                      Text="{Binding DestinationPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      IsEnabled="False" />
@@ -79,7 +79,7 @@
                 <TextBox x:Name="TxtXCoordinate"
                          MaxLength="4"
                          Margin="5"
-                         TextChanged="ProceedDecorationsValidation_TextChanged"
+                         TextChanged="InputValidation_TextChanged"
                          ToolTip="The amount by which all decorations move, for example 15"
                          Text="{Binding XValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          d:Text="15" />
@@ -92,7 +92,7 @@
                 <TextBox x:Name="TxtYCoordinate"
                          MaxLength="4"
                          Margin="5"
-                         TextChanged="ProceedDecorationsValidation_TextChanged"
+                         TextChanged="InputValidation_TextChanged"
                          ToolTip="The amount by which all decorations move, for example -15"
                          Text="{Binding YValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          d:Text="-15" />
