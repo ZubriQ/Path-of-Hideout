@@ -20,8 +20,8 @@
     <!-- Window's gray highlight -->
     <Border CornerRadius="8">
         <Border.Background>
-            <SolidColorBrush Color="{StaticResource Silver700}"
-                             Opacity="0.8" />
+            <SolidColorBrush Color="{StaticResource Silver500}"
+                             Opacity="0.3" />
         </Border.Background>
 
         <Grid>
