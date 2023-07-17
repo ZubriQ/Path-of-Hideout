@@ -1,0 +1,46 @@
+name: Deploy Path of Hideout
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+env:
+  APP_NAME: PathOfHideout
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    permissions:
+      contents: write
+      
+    steps:
+      - uses: actions/checkout@v3
+  
+      - name: Setup .NET 7
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Install dependencies
+        run: dotnet restore ./${{ env.APP_NAME }}.sln
+
+      - name: Build
+        run: dotnet build ./${{ env.APP_NAME }}.sln -c Release --no-restore
+
+      - name: Publish
+        run: |
+          dotnet publish ./src/${{ env.APP_NAME }}/${{ env.APP_NAME }}.csproj -c Release -r win-x64 --self-contained -p:EnableCompressionInSingleFile=true
+          mv ./src/${{ env.APP_NAME }}/bin/Release/net7.0-windows/win-x64/publish ./publish
+
+      - name: Archive
+        run: 7z a Path_of_Hideout.zip ./publish/*
+
+      - name: Create & Upload Release
+        id: create_upload_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: Path_of_Hideout.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
