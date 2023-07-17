@@ -2,7 +2,7 @@
 This application is currently compatible with Windows x64 only.
 
 # ❓ FAQ
-Q: On which hideouts does it work?
+Q: Which hideouts are supported by the application?
 
 _A: The application is designed for 'empty' hideouts such as Celestial Nebula, Infinite Abyss, and Endless Sands. So, it may not work on some other hideouts, but there’s a possible change in the app in the feature if needed._
 
