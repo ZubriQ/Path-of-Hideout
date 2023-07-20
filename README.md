@@ -1,3 +1,8 @@
+# Path of Hideout
+This is a dedicated desktop tool designed for Path of Exile. It provides an efficient way to manage and move all your hideout decorations at once. The tool is particularly useful for players who frequently customize their hideouts and want to save time and effort in rearranging their decorations.
+
+![image](https://i.imgur.com/CsbFcpR.png)
+
 # 🖥️ Supported Platforms
 This application is currently compatible with Windows x64 only.
 
